@@ -10,7 +10,7 @@ from handle_log_exception.exceptions import TranslationError
 logger = setup_logger("translator")
 
 
-def detect_language(text, client, model="gpt-4"):
+def detect_language(text, client, model="gpt-3.5-turbo"):
     """
     Utilise GPT pour détecter la langue du texte fourni.
 

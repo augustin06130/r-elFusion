@@ -18,7 +18,7 @@ def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description="Créer des reels vidéo à partir de posts Reddit")
     parser.add_argument("--subreddit", default="nosleep", help="Nom du subreddit à explorer")
-    parser.add_argument("--keyword", default="ghost", help="Mot-clé pour rechercher des posts")
+    parser.add_argument("--keyword", default="the", help="Mot-clé pour rechercher des posts")
     parser.add_argument("--limit", type=int, default=20, help="Nombre de posts à vérifier")
     parser.add_argument("--chunk_size", type=int, default=200, help="Nombre de mots par segment vidéo")
     parser.add_argument("--background", default="fond.mp4", help="Vidéo de fond à utiliser")

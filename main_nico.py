@@ -4,7 +4,7 @@ from openai import OpenAI
 
 # Import des modules personnalisés
 from config import parse_arguments, CLIENT_ID_REDDIT, CLIENT_SECRET_REDDIT
-from reddit_client import setup_reddit, get_reddit_text
+from reddit_client import setup_reddit, get_reddit_content
 from text_processor import clean_reddit_text, split_text_into_chunks, setup_nltk
 from translator import translate_text_with_gpt, detect_language
 from media_generator import process_video_from_text
@@ -63,22 +63,25 @@ def main():
             raise RedditConnectionError() from e
 
         # Récupérer le post
-        logger.info(f"Recherche de posts dans r/{args.subreddit} avec le mot-clé '{args.keyword}'")
+        logger.info(f"Recherche de posts dans r/{args.subreddit}")
         try:
-            post_id, reddit_text = get_reddit_text(
-                reddit,
-                args.subreddit,
-                args.keyword,
-                args.limit
+            post_id, reddit_text, subreddit, title = get_reddit_content(
+                reddit=reddit,
+                openai_client=client,  # Le client OpenAI déjà configuré
+                subreddit_name=args.subreddit,
+                theme="horror",  # Optionnel, si args.subreddit n'est pas spécifié
+                # keyword=args.keyword,  # Optionnel
+                min_length=1000,  # Optionnel
+                # max_length=10000  # Optionnel
             )
             if not post_id:
-                raise RedditContentError(args.subreddit, args.keyword)
+                raise RedditContentError(args.subreddit)
 
             logger.info(f"Post trouvé: {post_id} ({len(reddit_text)} caractères)")
         except RedditError as e:
             raise
         except Exception as e:
-            raise RedditContentError(args.subreddit, args.keyword) from e
+            raise RedditContentError(args.subreddit) from e
 
         # Nettoyer le texte
         logger.info("Nettoyage du texte récupéré")
@@ -121,7 +124,6 @@ def main():
                     raise TranslationError(f"Erreur lors de la traduction avec GPT: {str(e)}") from e
             else:
                 translated = cleaned
-
         # Découper le texte en morceaux
         logger.info(f"Découpage du texte en segments de {args.chunk_size} mots")
         try:
@@ -150,8 +152,8 @@ def main():
             logger.info(f"Traitement du segment {segment_num}/{len(chunks)}")
 
             # Fichiers temporaires pour ce segment
-            audio_file = os.path.join(args.output_dir, f"audio_{post_id}_{segment_num}.mp3")
-            video_file = os.path.join(args.output_dir, f"video_{post_id}_{segment_num}.mp4")
+            audio_file = os.path.join(args.output_dir, f"audio_{post_id}_{title}_{args.target_language}_{segment_num}.mp3")
+            video_file = os.path.join(args.output_dir, f"video_{post_id}_{title}_{args.target_language}_{segment_num}.mp4")
 
             try:
                 # Déterminer la langue pour la voix

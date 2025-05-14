@@ -83,3 +83,17 @@
 2025-05-14 20:03:18,269 | text_processor | INFO | Texte nettoyé: 851 → 459 caractères (46.1% de réduction)
 2025-05-14 20:03:21,682 | text_processor | INFO | Découpage du texte en segments d'environ 200 mots
 2025-05-14 20:03:21,725 | text_processor | INFO | 1 segments créés (moyenne de 97.0 mots par segment)
+2025-05-14 20:27:37,493 | text_processor | INFO | Configuration de NLTK
+2025-05-14 20:29:14,714 | text_processor | INFO | Configuration de NLTK
+2025-05-14 20:36:53,544 | text_processor | INFO | Configuration de NLTK
+2025-05-14 20:38:25,576 | text_processor | INFO | Configuration de NLTK
+2025-05-14 20:38:44,189 | text_processor | INFO | Configuration de NLTK
+2025-05-14 20:39:20,730 | text_processor | INFO | Configuration de NLTK
+2025-05-14 20:40:39,451 | text_processor | INFO | Configuration de NLTK
+2025-05-14 20:41:09,045 | text_processor | INFO | Configuration de NLTK
+2025-05-14 20:41:28,700 | text_processor | INFO | Configuration de NLTK
+2025-05-14 20:49:07,338 | text_processor | INFO | Configuration de NLTK
+2025-05-14 20:49:10,895 | text_processor | INFO | Nettoyage du texte brut
+2025-05-14 20:49:10,896 | text_processor | INFO | Texte nettoyé: 1363 → 1335 caractères (2.1% de réduction)
+2025-05-14 20:49:17,985 | text_processor | INFO | Découpage du texte en segments d'environ 200 mots
+2025-05-14 20:49:18,028 | text_processor | INFO | 2 segments créés (moyenne de 127.5 mots par segment)

@@ -276,3 +276,92 @@ UnboundLocalError: cannot access local variable 'voice_language' where it is not
 2025-05-14 20:04:11,063 | reddit_video | INFO | Vidéos créées avec succès: 1/1
 2025-05-14 20:04:11,063 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
 2025-05-14 20:04:11,063 | reddit_video | INFO | Programme terminé avec succès: 1/1 vidéos créées
+2025-05-14 20:27:37,985 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:27:37,987 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:27:37,987 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:27:38,019 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:27:38,020 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:27:39,948 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/ghost avec le mot-clé '20' (Code: Aucun contenu valide trouvé après 5 tentatives)
+2025-05-14 20:27:39,954 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:29:15,108 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:29:15,110 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:29:15,110 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:29:15,141 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:29:15,143 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:29:17,155 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:29:17,159 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:36:53,989 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:36:53,991 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:36:53,991 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:36:54,023 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:36:54,025 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:36:54,025 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:36:54,026 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:38:26,034 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:38:26,035 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:38:26,036 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:38:26,067 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:38:26,068 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:38:31,740 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/horror avec le mot-clé 'ghost' (Code: Aucun contenu valide trouvé après 5 tentatives)
+2025-05-14 20:38:31,744 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:38:44,578 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:38:44,580 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:38:44,580 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:38:44,613 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:38:44,614 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:38:48,550 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:38:48,551 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:39:21,149 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:39:21,150 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:39:21,150 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:39:21,178 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:39:21,179 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'ghost'
+2025-05-14 20:39:24,081 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/creepypasta avec le mot-clé 'ghost'
+2025-05-14 20:39:24,082 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:40:39,834 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:40:39,835 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:40:39,835 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:40:39,867 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:40:39,869 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:40:42,723 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:40:42,725 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:41:09,423 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:41:09,424 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:41:09,425 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:41:09,457 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:41:09,458 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:41:12,316 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:41:12,318 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:41:29,081 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:41:29,083 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:41:29,083 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:41:29,114 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:41:29,115 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:41:32,053 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:41:32,054 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:49:07,832 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:49:07,833 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:49:07,834 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:49:07,866 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:49:07,868 | reddit_video | INFO | Recherche de posts dans r/creepypasta
+2025-05-14 20:49:10,894 | reddit_video | INFO | Post trouvé: 1kkxpxq (1363 caractères)
+2025-05-14 20:49:10,894 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 20:49:11,519 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 20:49:17,985 | reddit_video | INFO | Traduction effectuée: 1536 caractères
+2025-05-14 20:49:17,985 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 20:49:18,028 | reddit_video | INFO | 2 segments créés
+2025-05-14 20:49:18,028 | reddit_video | INFO | Segment 1/2 (198 mots): Je ne commente généralement pas sur des endroits comme celui-ci. Je suis un observateur. Je l'ai toujours été. Mais après ce qui a été posté hier, je ...
+2025-05-14 20:49:18,028 | reddit_video | INFO | Segment 2/2 (57 mots): Il ne dort pas. Il n'oublie pas. Espèce d'égoïste. Vous vouliez juste du temps. Et maintenant, le monde entier a un pied dans son monde. Mille morts s...
+2025-05-14 20:49:18,028 | reddit_video | INFO | Traitement du segment 1/2
+2025-05-14 20:49:18,028 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 20:51:13,163 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_1.mp4
+2025-05-14 20:51:13,163 | reddit_video | INFO | Traitement du segment 2/2
+2025-05-14 20:51:13,163 | reddit_video | INFO | Création de la vidéo pour le segment 2
+2025-05-14 20:51:50,733 | reddit_video | INFO | Vidéo 2 créée avec succès: output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_2.mp4
+2025-05-14 20:51:50,734 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 20:51:50,734 | reddit_video | INFO | Post: 1kkxpxq
+2025-05-14 20:51:50,734 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 20:51:50,734 | reddit_video | INFO | Segments traités: 2
+2025-05-14 20:51:50,734 | reddit_video | INFO | Vidéos créées avec succès: 2/2
+2025-05-14 20:51:50,734 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:51:50,734 | reddit_video | INFO | Programme terminé avec succès: 2/2 vidéos créées

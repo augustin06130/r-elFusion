@@ -89,3 +89,25 @@
 2025-05-14 20:03:27,824 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
 2025-05-14 20:03:27,824 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kmavoc_1.mp4...
 2025-05-14 20:04:11,039 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kmavoc_1.mp4 (14.3 MB)
+2025-05-14 20:49:18,028 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1197 caractères)
+2025-05-14 20:49:18,029 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-14 20:49:18,029 | audio_video_processor | INFO | Conversion du texte en audio (1197 caractères)
+2025-05-14 20:49:34,852 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (627.0 KB)
+2025-05-14 20:49:34,852 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 20:49:34,852 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-14 20:49:35,221 | audio_video_processor | INFO | Création des sous-titres pour le texte (1197 caractères)
+2025-05-14 20:49:35,737 | audio_video_processor | INFO | 50 clips de sous-titres créés avec succès
+2025-05-14 20:49:35,764 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-14 20:49:35,764 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_1.mp4...
+2025-05-14 20:51:13,135 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_1.mp4 (29.5 MB)
+2025-05-14 20:51:13,163 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (321 caractères)
+2025-05-14 20:51:13,163 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-14 20:51:13,163 | audio_video_processor | INFO | Conversion du texte en audio (321 caractères)
+2025-05-14 20:51:22,854 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (176.4 KB)
+2025-05-14 20:51:22,855 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 20:51:22,855 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-14 20:51:23,366 | audio_video_processor | INFO | Création des sous-titres pour le texte (321 caractères)
+2025-05-14 20:51:23,524 | audio_video_processor | INFO | 15 clips de sous-titres créés avec succès
+2025-05-14 20:51:23,547 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-14 20:51:23,547 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_2.mp4...
+2025-05-14 20:51:50,712 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_2.mp4 (8.6 MB)
