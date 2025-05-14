@@ -90,34 +90,37 @@ def main():
             logger.warning("Utilisation du texte brut non nettoyé")
             cleaned = reddit_text
 
-        if args.target_language != "nt": #Ne pas traduire si l'utilsateur ne choisit pas de langue cible
 
-            try:
-                source_language = detect_language(reddit_text, client, args.model)
-                logger.debug(f"Langue détectée: {source_language}")
+        try:
+            source_language = detect_language(reddit_text, client, args.gpt_model)
+            logger.debug(f"Langue détectée: {source_language}")
 
-                if source_language == args.target_language:
-                    logger.info("Langue source identique à la langue cible. Pas de traduction nécessaire.")
-
-            except TranslationError:
-                logger.warning("Détection de langue échouée. Tentative de traduction quand même.")
-
-
-          # Traduire le texte avec GPT
             if source_language == args.target_language:
+                logger.info("Langue source identique à la langue cible. Pas de traduction nécessaire.")
+            if args.target_language == "nt":  # No translation
+                args.target_language = source_language
+        except TranslationError:
+            logger.warning("Détection de langue échouée. Tentative de traduction quand même.")
+
+
+        if args.target_language != "nt": #Ne pas traduire si l'utilsateur ne choisit pas de langue cible
+          # Traduire le texte avec GPT
+            if source_language != args.target_language:
                 logger.info(f"Traduction du texte avec le modèle {args.gpt_model}")
                 try:
                     translated = translate_text_with_gpt(
-                      cleaned,
-                     client,
-                     args.gpt_model,
-                     max_tokens=4096,
-                     target_language=args.target_language,
-                     # max_chars=args.max_chars
+                    cleaned,
+                    client,
+                    args.gpt_model,
+                    max_tokens=4096,
+                    source_language=source_language,
+                    target_language=args.target_language,
                   )
                     logger.info(f"Traduction effectuée: {len(translated)} caractères")
                 except Exception as e:
                     raise TranslationError(f"Erreur lors de la traduction avec GPT: {str(e)}") from e
+            else:
+                translated = cleaned
 
         # Découper le texte en morceaux
         logger.info(f"Découpage du texte en segments de {args.chunk_size} mots")
@@ -154,7 +157,7 @@ def main():
                 # Déterminer la langue pour la voix
                 voice_language = args.target_language
                 if voice_language == "nt":  # No translation
-                    voice_language = "fr"
+                    voice_language = "en"
 
                 # Génération de la vidéo à partir du texte
                 logger.info(f"Création de la vidéo pour le segment {segment_num}")

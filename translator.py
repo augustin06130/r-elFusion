@@ -43,7 +43,7 @@ def detect_language(text, client, model="gpt-4"):
         raise TranslationError(f"Erreur détection langue: {e}")
 
 
-def translate_text_with_gpt(text, client, model, max_tokens, target_language, retry_count=3, wait_time=2):
+def translate_text_with_gpt(text, client, model, max_tokens, target_language, source_language="en", retry_count=3, wait_time=2):
     """
     Traduit un texte d'une langue source détectée vers une langue cible avec GPT.
     Ignore la traduction si la langue source est identique à la langue cible.

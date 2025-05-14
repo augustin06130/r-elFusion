@@ -132,3 +132,103 @@ He turned and began shuffling along the beach then, but not before turning bac..
 2025-05-14 03:38:17,440 | reddit_video | INFO | Vidéos créées avec succès: 4/4
 2025-05-14 03:38:17,440 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
 2025-05-14 03:38:17,442 | reddit_video | INFO | Programme terminé avec succès: 4/4 vidéos créées
+2025-05-14 19:34:36,231 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:34:36,232 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:34:36,232 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:34:36,263 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:34:36,265 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:34:37,954 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:34:37,954 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:34:37,955 | reddit_video | CRITICAL | Erreur non gérée: 'Namespace' object has no attribute 'model'
+Traceback (most recent call last):
+  File "/Users/ntardy/Dev/r-elFusion/main_nico.py", line 96, in main
+    source_language = detect_language(reddit_text, client, args.model)
+                                                           ^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'model'
+2025-05-14 19:34:37,963 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 19:35:07,550 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:35:07,551 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:35:07,551 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:35:07,576 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:35:07,577 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:35:08,736 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:35:08,736 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:35:09,879 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 19:35:09,880 | reddit_video | CRITICAL | Erreur fatale: Erreur lors du découpage du texte: cannot access local variable 'translated' where it is not associated with a value
+2025-05-14 19:35:09,881 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 19:35:55,716 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:35:55,717 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:35:55,717 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:35:55,744 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:35:55,745 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:35:57,059 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:35:57,059 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:35:58,134 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 19:35:58,172 | reddit_video | INFO | 1 segments créés
+2025-05-14 19:35:58,172 | reddit_video | INFO | Segment 1/1 (170 mots): Trying to find two creepypastas I’ve read over a decade ago.. I hate for this to be my first post here, but I've been trying to find two creepypastas ...
+2025-05-14 19:35:58,172 | reddit_video | INFO | Traitement du segment 1/1
+2025-05-14 19:35:58,173 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 19:36:59,226 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1kmfy7t_1.mp4
+2025-05-14 19:36:59,227 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 19:36:59,227 | reddit_video | INFO | Post: 1kmfy7t
+2025-05-14 19:36:59,227 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 19:36:59,227 | reddit_video | INFO | Segments traités: 1
+2025-05-14 19:36:59,227 | reddit_video | INFO | Vidéos créées avec succès: 1/1
+2025-05-14 19:36:59,227 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:36:59,227 | reddit_video | INFO | Programme terminé avec succès: 1/1 vidéos créées
+2025-05-14 19:41:51,680 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:41:51,682 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:41:51,682 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:41:51,713 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:41:51,714 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:41:52,964 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:41:52,965 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:41:54,569 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 19:41:54,570 | reddit_video | CRITICAL | Erreur de traduction: Erreur lors de la traduction avec GPT: name 'source_language' is not defined
+2025-05-14 19:41:54,571 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 19:43:12,139 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:43:12,142 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:43:12,142 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:43:12,174 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:43:12,175 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:43:13,399 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:43:13,399 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:43:14,540 | reddit_video | CRITICAL | Erreur non gérée: cannot access local variable 'voice_language' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/ntardy/Dev/r-elFusion/main_nico.py", line 100, in main
+    if voice_language == "nt":  # No translation
+       ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'voice_language' where it is not associated with a value
+2025-05-14 19:43:14,543 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 19:44:27,992 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:44:27,993 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:44:27,994 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:44:28,020 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:44:28,021 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:44:29,192 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:44:29,193 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:44:30,315 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 19:44:30,316 | reddit_video | CRITICAL | Erreur de traduction: Erreur lors de la traduction avec GPT: name 'source_language' is not defined
+2025-05-14 19:44:30,317 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 19:47:28,773 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:47:28,774 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:47:28,774 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:47:28,805 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:47:28,806 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:47:30,079 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:47:30,079 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:47:31,669 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 19:47:35,046 | reddit_video | INFO | Traduction effectuée: 1116 caractères
+2025-05-14 19:47:35,046 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 19:47:35,088 | reddit_video | INFO | 1 segments créés
+2025-05-14 19:47:35,088 | reddit_video | INFO | Segment 1/1 (192 mots): Je cherche deux creepypastas que j'ai lues il y a plus d'une décennie... Je déteste que ce soit mon premier message ici, mais j'essaie de retrouver de...
+2025-05-14 19:47:35,088 | reddit_video | INFO | Traitement du segment 1/1
+2025-05-14 19:47:35,088 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 19:48:35,622 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1kmfy7t_1.mp4
+2025-05-14 19:48:35,622 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 19:48:35,622 | reddit_video | INFO | Post: 1kmfy7t
+2025-05-14 19:48:35,622 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 19:48:35,622 | reddit_video | INFO | Segments traités: 1
+2025-05-14 19:48:35,623 | reddit_video | INFO | Vidéos créées avec succès: 1/1
+2025-05-14 19:48:35,623 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:48:35,623 | reddit_video | INFO | Programme terminé avec succès: 1/1 vidéos créées
