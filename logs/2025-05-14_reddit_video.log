@@ -1,0 +1,367 @@
+2025-05-14 03:26:32,225 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 03:26:32,226 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 03:26:32,226 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 03:26:32,255 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 03:26:32,256 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 03:26:33,897 | reddit_video | INFO | Post trouvé: 1klo2ks (19500 caractères)
+2025-05-14 03:26:33,897 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 03:26:33,902 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 03:26:33,902 | reddit_video | INFO | Traduction effectuée: 19445 caractères
+2025-05-14 03:26:33,902 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 03:26:33,946 | reddit_video | INFO | 19 segments créés
+2025-05-14 03:26:33,946 | reddit_video | INFO | Segment 1/19 (176 mots): The thing I pulled from the ocean is changing me - part 1. It was a little past 7:00am on a particularly humid Monday morning when I first discovered ...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 2/19 (198 mots): Looking back now, I can’t help but wonder how different things might have turned out, had I just continued walking, left the thing to whichever grizzl...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 3/19 (190 mots): A thick film of sweat had formed all over our bodies, making our shirts (Hawaiian short-sleeve for me, navy polo for Nel) cling uncomfortably to our b...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 4/19 (200 mots): Better to be safe, let the proper authorities take care of it. It was the only reasonable thing to do. Only we didn’t do that. To this day, I’m not su...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 5/19 (200 mots): I’m not proud of how I manipulated him. Or the things I did later—which, again, I’ll get to. Sure, there’s a chance it was just the Creature working i...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 6/19 (186 mots): In an effort to better accommodate our new friend, we’d gone and brought over one of the industrial-sized drums Nel used to collect rainwater for his ...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 7/19 (200 mots): Naming it felt counterintuitive; to the best of my knowledge, people did not normally name a thing they knew they would eventually have to give away. ...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 8/19 (195 mots): It meant nothing to me, of course. Little more than a jumble of syllables. But then, it wasn’t my word, was it? Meanwhile, Nel was looking at me like ...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 9/19 (200 mots): I sat on the edge of my couch for a long time after, staring at the barrel, and the unassuming little creature inside. I wondered if we had made the r...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 10/19 (197 mots): True to his word, Nel returned the next morning, bearing gifts of a nature that initially surprised me. Among these were a digital camera (the type wh...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 11/19 (191 mots): And that goldfish had died. Nel, on the other hand, was once married with children. Owned his own business. Say what you want about the guy, but he un...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 12/19 (173 mots): There, on my porch, stood a girl of around thirteen years of age. She wore a khaki skirt and a mint-green sleeveless jacket, the type with badges pinn...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 13/19 (197 mots): Tourist-season had arrived by this point, the beaches and towns all but overrun by flocks of holiday-goers and people looking to let their hair down f...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 14/19 (189 mots): At first I thought it was just my age (when you get to be as old as I am, discovering a new ailment every other day or so is just par for the course)....
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 15/19 (195 mots): He was standing before the water's edge, staring fixedly out at it as though trying to see something far off on the horizon. There was a look on his f...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 16/19 (199 mots): Nel had been besotted with the Creature. Now he wanted me to get rid of him? What? “But why—”
+
+“I’m serious, Hal,” he overrode me. “That thing in ther...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 17/19 (198 mots): “I’ve said what I came here to say. What you do with it is up to you.”
+
+He turned and began shuffling along the beach then, but not before turning bac...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 18/19 (191 mots): Despite the fact visitors to this part of Florida’s coast were scarce at best, the possibility—probable or not—that someone might stumble upon my disc...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 19/19 (108 mots): I’m sure deep down some part of me must have known. And yet still, I had gone along with it, believed the lies, even as the part of me that was still ...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Traitement du segment 1/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 1: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 2/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 2
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 2: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 3/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 3
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 3: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 4/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 4
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 4: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 5/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 5
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 5: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 6/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 6
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 6: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 7/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 7
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 7: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 8/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 8
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 8: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 9/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 9
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 9: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 10/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 10
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 10: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 11/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 11
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 11: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 12/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 12
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 12: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 13/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 13
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 13: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 14/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 14
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 14: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 15/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 15
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 15: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 16/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 16
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 16: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,950 | reddit_video | INFO | Traitement du segment 17/19
+2025-05-14 03:26:33,950 | reddit_video | INFO | Création de la vidéo pour le segment 17
+2025-05-14 03:26:33,950 | reddit_video | ERROR | Erreur inattendue pour le segment 17: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,950 | reddit_video | INFO | Traitement du segment 18/19
+2025-05-14 03:26:33,950 | reddit_video | INFO | Création de la vidéo pour le segment 18
+2025-05-14 03:26:33,950 | reddit_video | ERROR | Erreur inattendue pour le segment 18: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,950 | reddit_video | INFO | Traitement du segment 19/19
+2025-05-14 03:26:33,950 | reddit_video | INFO | Création de la vidéo pour le segment 19
+2025-05-14 03:26:33,950 | reddit_video | ERROR | Erreur inattendue pour le segment 19: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,950 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 03:26:33,950 | reddit_video | INFO | Post: 1klo2ks
+2025-05-14 03:26:33,950 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 03:26:33,950 | reddit_video | INFO | Segments traités: 19
+2025-05-14 03:26:33,950 | reddit_video | INFO | Vidéos créées avec succès: 0/19
+2025-05-14 03:26:33,950 | reddit_video | WARNING | Segments en échec: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+2025-05-14 03:26:33,950 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 03:26:33,950 | reddit_video | CRITICAL | Erreur fatale: Tous les segments ont échoué lors de la génération des vidéos.
+2025-05-14 03:26:33,952 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 03:34:36,294 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 03:34:36,295 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 03:34:36,295 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 03:34:36,326 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 03:34:36,327 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 03:34:37,578 | reddit_video | INFO | Post trouvé: 1klywxq (3819 caractères)
+2025-05-14 03:34:37,578 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 03:34:37,580 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 03:34:37,580 | reddit_video | INFO | Traduction effectuée: 3135 caractères
+2025-05-14 03:34:37,580 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 03:34:37,652 | reddit_video | INFO | 4 segments créés
+2025-05-14 03:34:37,652 | reddit_video | INFO | Segment 1/4 (194 mots): I'm feeling watched.... # I've not slept in 3 days, and something is waiting for me... It all started May 11th when I got home, I felt something was o...
+2025-05-14 03:34:37,652 | reddit_video | INFO | Segment 2/4 (177 mots): As I was heading down the stairs, I heard something fall downstairs. I ran back to my room, locked the door as quick as possible but nothing came, so ...
+2025-05-14 03:34:37,652 | reddit_video | INFO | Segment 3/4 (197 mots): That's when I saw it, meanwhile I was heading down I saw IT, the thing that had been watching me all day and got me restless. IT was black, pure black...
+2025-05-14 03:34:37,652 | reddit_video | INFO | Segment 4/4 (57 mots): But why?, why me? I've been a good person my whole life, I work from 12pm to 8pm (I work in a 24/7 retail store) and I haven't done anything bad to an...
+2025-05-14 03:34:37,652 | reddit_video | INFO | Traitement du segment 1/4
+2025-05-14 03:34:37,652 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 03:35:48,901 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1klywxq_1.mp4
+2025-05-14 03:35:48,902 | reddit_video | INFO | Traitement du segment 2/4
+2025-05-14 03:35:48,902 | reddit_video | INFO | Création de la vidéo pour le segment 2
+2025-05-14 03:36:49,296 | reddit_video | INFO | Vidéo 2 créée avec succès: output/video_1klywxq_2.mp4
+2025-05-14 03:36:49,296 | reddit_video | INFO | Traitement du segment 3/4
+2025-05-14 03:36:49,296 | reddit_video | INFO | Création de la vidéo pour le segment 3
+2025-05-14 03:37:55,107 | reddit_video | INFO | Vidéo 3 créée avec succès: output/video_1klywxq_3.mp4
+2025-05-14 03:37:55,108 | reddit_video | INFO | Traitement du segment 4/4
+2025-05-14 03:37:55,108 | reddit_video | INFO | Création de la vidéo pour le segment 4
+2025-05-14 03:38:17,439 | reddit_video | INFO | Vidéo 4 créée avec succès: output/video_1klywxq_4.mp4
+2025-05-14 03:38:17,440 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 03:38:17,440 | reddit_video | INFO | Post: 1klywxq
+2025-05-14 03:38:17,440 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 03:38:17,440 | reddit_video | INFO | Segments traités: 4
+2025-05-14 03:38:17,440 | reddit_video | INFO | Vidéos créées avec succès: 4/4
+2025-05-14 03:38:17,440 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 03:38:17,442 | reddit_video | INFO | Programme terminé avec succès: 4/4 vidéos créées
+2025-05-14 19:34:36,231 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:34:36,232 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:34:36,232 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:34:36,263 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:34:36,265 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:34:37,954 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:34:37,954 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:34:37,955 | reddit_video | CRITICAL | Erreur non gérée: 'Namespace' object has no attribute 'model'
+Traceback (most recent call last):
+  File "/Users/ntardy/Dev/r-elFusion/main_nico.py", line 96, in main
+    source_language = detect_language(reddit_text, client, args.model)
+                                                           ^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'model'
+2025-05-14 19:34:37,963 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 19:35:07,550 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:35:07,551 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:35:07,551 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:35:07,576 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:35:07,577 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:35:08,736 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:35:08,736 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:35:09,879 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 19:35:09,880 | reddit_video | CRITICAL | Erreur fatale: Erreur lors du découpage du texte: cannot access local variable 'translated' where it is not associated with a value
+2025-05-14 19:35:09,881 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 19:35:55,716 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:35:55,717 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:35:55,717 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:35:55,744 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:35:55,745 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:35:57,059 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:35:57,059 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:35:58,134 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 19:35:58,172 | reddit_video | INFO | 1 segments créés
+2025-05-14 19:35:58,172 | reddit_video | INFO | Segment 1/1 (170 mots): Trying to find two creepypastas I’ve read over a decade ago.. I hate for this to be my first post here, but I've been trying to find two creepypastas ...
+2025-05-14 19:35:58,172 | reddit_video | INFO | Traitement du segment 1/1
+2025-05-14 19:35:58,173 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 19:36:59,226 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1kmfy7t_1.mp4
+2025-05-14 19:36:59,227 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 19:36:59,227 | reddit_video | INFO | Post: 1kmfy7t
+2025-05-14 19:36:59,227 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 19:36:59,227 | reddit_video | INFO | Segments traités: 1
+2025-05-14 19:36:59,227 | reddit_video | INFO | Vidéos créées avec succès: 1/1
+2025-05-14 19:36:59,227 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:36:59,227 | reddit_video | INFO | Programme terminé avec succès: 1/1 vidéos créées
+2025-05-14 19:41:51,680 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:41:51,682 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:41:51,682 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:41:51,713 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:41:51,714 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:41:52,964 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:41:52,965 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:41:54,569 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 19:41:54,570 | reddit_video | CRITICAL | Erreur de traduction: Erreur lors de la traduction avec GPT: name 'source_language' is not defined
+2025-05-14 19:41:54,571 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 19:43:12,139 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:43:12,142 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:43:12,142 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:43:12,174 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:43:12,175 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:43:13,399 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:43:13,399 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:43:14,540 | reddit_video | CRITICAL | Erreur non gérée: cannot access local variable 'voice_language' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/ntardy/Dev/r-elFusion/main_nico.py", line 100, in main
+    if voice_language == "nt":  # No translation
+       ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'voice_language' where it is not associated with a value
+2025-05-14 19:43:14,543 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 19:44:27,992 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:44:27,993 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:44:27,994 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:44:28,020 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:44:28,021 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:44:29,192 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:44:29,193 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:44:30,315 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 19:44:30,316 | reddit_video | CRITICAL | Erreur de traduction: Erreur lors de la traduction avec GPT: name 'source_language' is not defined
+2025-05-14 19:44:30,317 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 19:47:28,773 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:47:28,774 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:47:28,774 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:47:28,805 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:47:28,806 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 19:47:30,079 | reddit_video | INFO | Post trouvé: 1kmfy7t (1019 caractères)
+2025-05-14 19:47:30,079 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:47:31,669 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 19:47:35,046 | reddit_video | INFO | Traduction effectuée: 1116 caractères
+2025-05-14 19:47:35,046 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 19:47:35,088 | reddit_video | INFO | 1 segments créés
+2025-05-14 19:47:35,088 | reddit_video | INFO | Segment 1/1 (192 mots): Je cherche deux creepypastas que j'ai lues il y a plus d'une décennie... Je déteste que ce soit mon premier message ici, mais j'essaie de retrouver de...
+2025-05-14 19:47:35,088 | reddit_video | INFO | Traitement du segment 1/1
+2025-05-14 19:47:35,088 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 19:48:35,622 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1kmfy7t_1.mp4
+2025-05-14 19:48:35,622 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 19:48:35,622 | reddit_video | INFO | Post: 1kmfy7t
+2025-05-14 19:48:35,622 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 19:48:35,622 | reddit_video | INFO | Segments traités: 1
+2025-05-14 19:48:35,623 | reddit_video | INFO | Vidéos créées avec succès: 1/1
+2025-05-14 19:48:35,623 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:48:35,623 | reddit_video | INFO | Programme terminé avec succès: 1/1 vidéos créées
+2025-05-14 19:51:27,535 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:51:27,536 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:51:27,537 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:51:27,567 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:51:27,569 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'door'
+2025-05-14 19:51:28,722 | reddit_video | INFO | Post trouvé: 1kmavoc (851 caractères)
+2025-05-14 19:51:28,722 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:51:29,857 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 19:51:31,913 | reddit_video | INFO | Traduction effectuée: 575 caractères
+2025-05-14 19:51:31,913 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 19:51:31,954 | reddit_video | INFO | 1 segments créés
+2025-05-14 19:51:31,954 | reddit_video | INFO | Segment 1/1 (97 mots): Question sur le chien dans "The Lodge". Chaque publication que j'ai lue mentionnant le chien le décrit comme ayant été délibérément tué par les enfant...
+2025-05-14 19:51:31,954 | reddit_video | INFO | Traitement du segment 1/1
+2025-05-14 19:51:31,954 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 19:52:05,269 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1kmavoc_1.mp4
+2025-05-14 19:52:05,269 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 19:52:05,269 | reddit_video | INFO | Post: 1kmavoc
+2025-05-14 19:52:05,269 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 19:52:05,269 | reddit_video | INFO | Segments traités: 1
+2025-05-14 19:52:05,269 | reddit_video | INFO | Vidéos créées avec succès: 1/1
+2025-05-14 19:52:05,269 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:52:05,269 | reddit_video | INFO | Programme terminé avec succès: 1/1 vidéos créées
+2025-05-14 20:03:16,489 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:03:16,490 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:03:16,490 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:03:16,522 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:03:16,825 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'door'
+2025-05-14 20:03:18,268 | reddit_video | INFO | Post trouvé: 1kmavoc (851 caractères)
+2025-05-14 20:03:18,268 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 20:03:19,895 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 20:03:21,681 | reddit_video | INFO | Traduction effectuée: 581 caractères
+2025-05-14 20:03:21,681 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 20:03:21,725 | reddit_video | INFO | 1 segments créés
+2025-05-14 20:03:21,725 | reddit_video | INFO | Segment 1/1 (97 mots): Question sur le chien dans "The Lodge". Chaque publication que j'ai lue mentionnant le chien le décrit comme ayant été délibérément tué par les enfant...
+2025-05-14 20:03:21,725 | reddit_video | INFO | Traitement du segment 1/1
+2025-05-14 20:03:21,725 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 20:04:11,062 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1kmavoc_1.mp4
+2025-05-14 20:04:11,063 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 20:04:11,063 | reddit_video | INFO | Post: 1kmavoc
+2025-05-14 20:04:11,063 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 20:04:11,063 | reddit_video | INFO | Segments traités: 1
+2025-05-14 20:04:11,063 | reddit_video | INFO | Vidéos créées avec succès: 1/1
+2025-05-14 20:04:11,063 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:04:11,063 | reddit_video | INFO | Programme terminé avec succès: 1/1 vidéos créées
+2025-05-14 20:27:37,985 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:27:37,987 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:27:37,987 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:27:38,019 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:27:38,020 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:27:39,948 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/ghost avec le mot-clé '20' (Code: Aucun contenu valide trouvé après 5 tentatives)
+2025-05-14 20:27:39,954 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:29:15,108 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:29:15,110 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:29:15,110 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:29:15,141 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:29:15,143 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:29:17,155 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:29:17,159 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:36:53,989 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:36:53,991 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:36:53,991 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:36:54,023 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:36:54,025 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:36:54,025 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:36:54,026 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:38:26,034 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:38:26,035 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:38:26,036 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:38:26,067 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:38:26,068 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:38:31,740 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/horror avec le mot-clé 'ghost' (Code: Aucun contenu valide trouvé après 5 tentatives)
+2025-05-14 20:38:31,744 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:38:44,578 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:38:44,580 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:38:44,580 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:38:44,613 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:38:44,614 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:38:48,550 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/horror avec le mot-clé 'ghost'
+2025-05-14 20:38:48,551 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:39:21,149 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:39:21,150 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:39:21,150 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:39:21,178 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:39:21,179 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'ghost'
+2025-05-14 20:39:24,081 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/creepypasta avec le mot-clé 'ghost'
+2025-05-14 20:39:24,082 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:40:39,834 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:40:39,835 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:40:39,835 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:40:39,867 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:40:39,869 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:40:42,723 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:40:42,725 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:41:09,423 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:41:09,424 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:41:09,425 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:41:09,457 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:41:09,458 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:41:12,316 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:41:12,318 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:41:29,081 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:41:29,083 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:41:29,083 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:41:29,114 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:41:29,115 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:41:32,053 | reddit_video | CRITICAL | Erreur de contenu Reddit: Aucun post trouvé dans r/creepypasta avec le mot-clé 'the'
+2025-05-14 20:41:32,054 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 20:49:07,832 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 20:49:07,833 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:49:07,834 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 20:49:07,866 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 20:49:07,868 | reddit_video | INFO | Recherche de posts dans r/creepypasta
+2025-05-14 20:49:10,894 | reddit_video | INFO | Post trouvé: 1kkxpxq (1363 caractères)
+2025-05-14 20:49:10,894 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 20:49:11,519 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 20:49:17,985 | reddit_video | INFO | Traduction effectuée: 1536 caractères
+2025-05-14 20:49:17,985 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 20:49:18,028 | reddit_video | INFO | 2 segments créés
+2025-05-14 20:49:18,028 | reddit_video | INFO | Segment 1/2 (198 mots): Je ne commente généralement pas sur des endroits comme celui-ci. Je suis un observateur. Je l'ai toujours été. Mais après ce qui a été posté hier, je ...
+2025-05-14 20:49:18,028 | reddit_video | INFO | Segment 2/2 (57 mots): Il ne dort pas. Il n'oublie pas. Espèce d'égoïste. Vous vouliez juste du temps. Et maintenant, le monde entier a un pied dans son monde. Mille morts s...
+2025-05-14 20:49:18,028 | reddit_video | INFO | Traitement du segment 1/2
+2025-05-14 20:49:18,028 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 20:51:13,163 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_1.mp4
+2025-05-14 20:51:13,163 | reddit_video | INFO | Traitement du segment 2/2
+2025-05-14 20:51:13,163 | reddit_video | INFO | Création de la vidéo pour le segment 2
+2025-05-14 20:51:50,733 | reddit_video | INFO | Vidéo 2 créée avec succès: output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_2.mp4
+2025-05-14 20:51:50,734 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 20:51:50,734 | reddit_video | INFO | Post: 1kkxpxq
+2025-05-14 20:51:50,734 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 20:51:50,734 | reddit_video | INFO | Segments traités: 2
+2025-05-14 20:51:50,734 | reddit_video | INFO | Vidéos créées avec succès: 2/2
+2025-05-14 20:51:50,734 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 20:51:50,734 | reddit_video | INFO | Programme terminé avec succès: 2/2 vidéos créées

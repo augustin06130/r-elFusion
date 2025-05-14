@@ -1,0 +1,113 @@
+2025-05-14 03:01:52,736 | audio_video_processor | INFO | Conversion du texte en audio (1217 caractères)
+2025-05-14 03:02:12,691 | audio_video_processor | INFO | Fichier audio créé avec succès: output/audio_1klo2ks_1.mp3 (699.9 KB)
+2025-05-14 03:02:12,691 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'output/audio_1klo2ks_1.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:02:12,692 | audio_video_processor | ERROR | Erreur lors de la création de la vidéo: Fichier vidéo de fond introuvable: fond.mp4
+2025-05-14 03:03:42,738 | audio_video_processor | INFO | Conversion du texte en audio (1246 caractères)
+2025-05-14 03:03:59,481 | audio_video_processor | INFO | Fichier audio créé avec succès: output/audio_1klo2ks_1.mp3 (710.1 KB)
+2025-05-14 03:03:59,481 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'output/audio_1klo2ks_1.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:03:59,481 | audio_video_processor | ERROR | Erreur lors de la création de la vidéo: Fichier vidéo de fond introuvable: fond.mp4
+2025-05-14 03:09:52,807 | audio_video_processor | INFO | Conversion du texte en audio (1188 caractères)
+2025-05-14 03:10:06,495 | audio_video_processor | INFO | Fichier audio créé avec succès: output/audio_1klo2ks_1.mp3 (671.6 KB)
+2025-05-14 03:10:06,496 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'output/audio_1klo2ks_1.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:10:06,841 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1klo2ks_1.mp4...
+2025-05-14 03:11:07,352 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1klo2ks_1.mp4 (30.1 MB)
+2025-05-14 03:11:07,373 | audio_video_processor | INFO | Conversion du texte en audio (1210 caractères)
+2025-05-14 03:11:28,063 | audio_video_processor | INFO | Fichier audio créé avec succès: output/audio_1klo2ks_2.mp3 (708.0 KB)
+2025-05-14 03:11:28,064 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'output/audio_1klo2ks_2.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:11:28,430 | audio_video_processor | WARNING | La vidéo de fond (87.9s) est plus courte que l'audio (90.6s)
+2025-05-14 03:11:28,430 | audio_video_processor | INFO | Bouclage de la vidéo pour correspondre à la durée de l'audio...
+2025-05-14 03:11:28,430 | audio_video_processor | ERROR | Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip'
+2025-05-14 03:11:54,888 | audio_video_processor | INFO | Conversion du texte en audio (929 caractères)
+2025-05-14 03:12:07,941 | audio_video_processor | INFO | Fichier audio créé avec succès: output/audio_1klo2ks_1.mp3 (531.2 KB)
+2025-05-14 03:12:07,941 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'output/audio_1klo2ks_1.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:12:08,245 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1klo2ks_1.mp4...
+2025-05-14 03:12:55,345 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1klo2ks_1.mp4 (23.1 MB)
+2025-05-14 03:12:55,370 | audio_video_processor | INFO | Conversion du texte en audio (1099 caractères)
+2025-05-14 03:13:18,203 | audio_video_processor | INFO | Fichier audio créé avec succès: output/audio_1klo2ks_2.mp3 (642.6 KB)
+2025-05-14 03:13:18,204 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'output/audio_1klo2ks_2.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:13:18,547 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1klo2ks_2.mp4...
+2025-05-14 03:15:54,493 | audio_video_processor | INFO | Conversion du texte en audio (929 caractères)
+2025-05-14 03:16:04,482 | audio_video_processor | INFO | Fichier audio créé avec succès: output/audio_1klo2ks_1.mp3 (571.3 KB)
+2025-05-14 03:16:04,482 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'output/audio_1klo2ks_1.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:16:04,851 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1klo2ks_1.mp4...
+2025-05-14 03:16:57,536 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1klo2ks_1.mp4 (25.1 MB)
+2025-05-14 03:16:57,563 | audio_video_processor | INFO | Conversion du texte en audio (1099 caractères)
+2025-05-14 03:17:10,786 | audio_video_processor | INFO | Fichier audio créé avec succès: output/audio_1klo2ks_2.mp3 (686.6 KB)
+2025-05-14 03:17:10,787 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'output/audio_1klo2ks_2.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:17:11,149 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1klo2ks_2.mp4...
+2025-05-14 03:29:33,675 | audio_video_processor | INFO | Conversion du texte en audio (929 caractères)
+2025-05-14 03:34:37,652 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1031 caractères)
+2025-05-14 03:34:37,654 | audio_video_processor | INFO | Conversion du texte en audio (1031 caractères)
+2025-05-14 03:34:49,538 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (666.2 KB)
+2025-05-14 03:34:49,539 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:34:49,880 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1klywxq_1.mp4...
+2025-05-14 03:35:48,876 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1klywxq_1.mp4 (29.9 MB)
+2025-05-14 03:35:48,902 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (883 caractères)
+2025-05-14 03:35:48,902 | audio_video_processor | INFO | Conversion du texte en audio (883 caractères)
+2025-05-14 03:35:59,231 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (563.8 KB)
+2025-05-14 03:35:59,231 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:35:59,573 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1klywxq_2.mp4...
+2025-05-14 03:36:49,274 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1klywxq_2.mp4 (24.7 MB)
+2025-05-14 03:36:49,296 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (950 caractères)
+2025-05-14 03:36:49,296 | audio_video_processor | INFO | Conversion du texte en audio (950 caractères)
+2025-05-14 03:37:01,780 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (595.3 KB)
+2025-05-14 03:37:01,781 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:37:02,137 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1klywxq_3.mp4...
+2025-05-14 03:37:55,083 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1klywxq_3.mp4 (26.4 MB)
+2025-05-14 03:37:55,108 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (259 caractères)
+2025-05-14 03:37:55,108 | audio_video_processor | INFO | Conversion du texte en audio (259 caractères)
+2025-05-14 03:38:00,030 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (185.1 KB)
+2025-05-14 03:38:00,030 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 03:38:00,377 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1klywxq_4.mp4...
+2025-05-14 03:38:17,416 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1klywxq_4.mp4 (8.6 MB)
+2025-05-14 19:35:58,173 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (938 caractères)
+2025-05-14 19:35:58,173 | audio_video_processor | INFO | Conversion du texte en audio (938 caractères)
+2025-05-14 19:36:10,297 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (555.6 KB)
+2025-05-14 19:36:10,298 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 19:36:10,671 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kmfy7t_1.mp4...
+2025-05-14 19:36:59,201 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kmfy7t_1.mp4 (24.3 MB)
+2025-05-14 19:47:35,089 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1113 caractères)
+2025-05-14 19:47:35,089 | audio_video_processor | INFO | Conversion du texte en audio (1113 caractères)
+2025-05-14 19:47:47,453 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (552.9 KB)
+2025-05-14 19:47:47,454 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 19:47:47,807 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kmfy7t_1.mp4...
+2025-05-14 19:48:35,597 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kmfy7t_1.mp4 (24.1 MB)
+2025-05-14 19:51:31,954 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (575 caractères)
+2025-05-14 19:51:31,954 | audio_video_processor | INFO | Conversion du texte en audio (575 caractères)
+2025-05-14 19:51:38,675 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (281.8 KB)
+2025-05-14 19:51:38,675 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 19:51:38,981 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kmavoc_1.mp4...
+2025-05-14 19:52:05,244 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kmavoc_1.mp4 (13.5 MB)
+2025-05-14 20:03:21,725 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (581 caractères)
+2025-05-14 20:03:21,726 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-14 20:03:21,726 | audio_video_processor | INFO | Conversion du texte en audio (581 caractères)
+2025-05-14 20:03:27,176 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (283.1 KB)
+2025-05-14 20:03:27,177 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 20:03:27,177 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-14 20:03:27,534 | audio_video_processor | INFO | Création des sous-titres pour le texte (581 caractères)
+2025-05-14 20:03:27,802 | audio_video_processor | INFO | 25 clips de sous-titres créés avec succès
+2025-05-14 20:03:27,824 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-14 20:03:27,824 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kmavoc_1.mp4...
+2025-05-14 20:04:11,039 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kmavoc_1.mp4 (14.3 MB)
+2025-05-14 20:49:18,028 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1197 caractères)
+2025-05-14 20:49:18,029 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-14 20:49:18,029 | audio_video_processor | INFO | Conversion du texte en audio (1197 caractères)
+2025-05-14 20:49:34,852 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (627.0 KB)
+2025-05-14 20:49:34,852 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 20:49:34,852 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-14 20:49:35,221 | audio_video_processor | INFO | Création des sous-titres pour le texte (1197 caractères)
+2025-05-14 20:49:35,737 | audio_video_processor | INFO | 50 clips de sous-titres créés avec succès
+2025-05-14 20:49:35,764 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-14 20:49:35,764 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_1.mp4...
+2025-05-14 20:51:13,135 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_1.mp4 (29.5 MB)
+2025-05-14 20:51:13,163 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (321 caractères)
+2025-05-14 20:51:13,163 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-14 20:51:13,163 | audio_video_processor | INFO | Conversion du texte en audio (321 caractères)
+2025-05-14 20:51:22,854 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (176.4 KB)
+2025-05-14 20:51:22,855 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 20:51:22,855 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-14 20:51:23,366 | audio_video_processor | INFO | Création des sous-titres pour le texte (321 caractères)
+2025-05-14 20:51:23,524 | audio_video_processor | INFO | 15 clips de sous-titres créés avec succès
+2025-05-14 20:51:23,547 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-14 20:51:23,547 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_2.mp4...
+2025-05-14 20:51:50,712 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kkxpxq_To whoever made that cursed Reddit post: you’ve doomed us all._en_2.mp4 (8.6 MB)
