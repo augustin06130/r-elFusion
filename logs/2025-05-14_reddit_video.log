@@ -232,3 +232,25 @@ UnboundLocalError: cannot access local variable 'voice_language' where it is not
 2025-05-14 19:48:35,623 | reddit_video | INFO | Vidéos créées avec succès: 1/1
 2025-05-14 19:48:35,623 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
 2025-05-14 19:48:35,623 | reddit_video | INFO | Programme terminé avec succès: 1/1 vidéos créées
+2025-05-14 19:51:27,535 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 19:51:27,536 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:51:27,537 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 19:51:27,567 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 19:51:27,569 | reddit_video | INFO | Recherche de posts dans r/horror avec le mot-clé 'door'
+2025-05-14 19:51:28,722 | reddit_video | INFO | Post trouvé: 1kmavoc (851 caractères)
+2025-05-14 19:51:28,722 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 19:51:29,857 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 19:51:31,913 | reddit_video | INFO | Traduction effectuée: 575 caractères
+2025-05-14 19:51:31,913 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 19:51:31,954 | reddit_video | INFO | 1 segments créés
+2025-05-14 19:51:31,954 | reddit_video | INFO | Segment 1/1 (97 mots): Question sur le chien dans "The Lodge". Chaque publication que j'ai lue mentionnant le chien le décrit comme ayant été délibérément tué par les enfant...
+2025-05-14 19:51:31,954 | reddit_video | INFO | Traitement du segment 1/1
+2025-05-14 19:51:31,954 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 19:52:05,269 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1kmavoc_1.mp4
+2025-05-14 19:52:05,269 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 19:52:05,269 | reddit_video | INFO | Post: 1kmavoc
+2025-05-14 19:52:05,269 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 19:52:05,269 | reddit_video | INFO | Segments traités: 1
+2025-05-14 19:52:05,269 | reddit_video | INFO | Vidéos créées avec succès: 1/1
+2025-05-14 19:52:05,269 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 19:52:05,269 | reddit_video | INFO | Programme terminé avec succès: 1/1 vidéos créées

@@ -72,3 +72,9 @@
 2025-05-14 19:47:47,454 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
 2025-05-14 19:47:47,807 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kmfy7t_1.mp4...
 2025-05-14 19:48:35,597 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kmfy7t_1.mp4 (24.1 MB)
+2025-05-14 19:51:31,954 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (575 caractères)
+2025-05-14 19:51:31,954 | audio_video_processor | INFO | Conversion du texte en audio (575 caractères)
+2025-05-14 19:51:38,675 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (281.8 KB)
+2025-05-14 19:51:38,675 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 19:51:38,981 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kmavoc_1.mp4...
+2025-05-14 19:52:05,244 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kmavoc_1.mp4 (13.5 MB)
