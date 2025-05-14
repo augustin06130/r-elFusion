@@ -14,7 +14,7 @@ def main():
     audio_path = generate_audio(text)
 
     print("🟣 Montage final...")
-    combine_video_audio(video_path, audio_path)
+    combine_video_audio(video_path, audio_path, text)
 
     print("✅ Montage terminé !")
 
