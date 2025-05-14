@@ -482,12 +482,12 @@ def crop_to_9_16(input_path=None, output_path=None, clip=None):
 if __name__ == "__main__":
     try:
         # Définir les thèmes et mots-clés à exclure
-        excluded_themes = ["politics", "violence"]
+        excluded_themes = ["violence"]
         excluded_keywords = ["violent"]
         
         # Définir les mots-clés à inclure (au moins un doit être présent)
-        included_keywords = ["minecraft", "gameplay", "timelaps", "build"]
-        included_themes = ["minecraft"]
+        included_keywords = ["comedie", "humour"]
+        included_themes = ["les inconnus la revolution"]
 
         # Télécharger une vidéo par thème avec exclusions et inclusions
         video_path = download_video_by_theme(
