@@ -14,8 +14,8 @@ def combine_video_audio(video_path, audio_path, text, output_path="outputs/final
 
     # Synchroniser la durée
     final_duration = min(video.duration, audio.duration)
-    video = video.subclipped(0, final_duration)  
-    audio = audio.subclipped(0, final_duration)  
+    video = video.subclipped(0, final_duration)
+    audio = audio.subclipped(0, final_duration)
     video = video.with_audio(audio)  # Appliquer l'audio au clip vidéo
 
     # Gestion des sous-titres
@@ -24,10 +24,10 @@ def combine_video_audio(video_path, audio_path, text, output_path="outputs/final
     segments = [' '.join(words[i:i+segment_length]) for i in range(0, len(words), segment_length)]
     subtitle_duration = final_duration / len(segments)
 
-    def create_text_image(text, video_width, video_height, font_size=40): 
+    def create_text_image(text, video_width, video_height, font_size=40):
         img = Image.new('RGBA', (video_width, video_height), (0, 0, 0, 0))
         draw = ImageDraw.Draw(img)
-        
+
         try:
             font = ImageFont.truetype("assets/fronts/Montserrat/static/Montserrat-Bold.ttf", font_size)  # Assure-toi que ce fichier existe
         except:
@@ -48,30 +48,30 @@ def combine_video_audio(video_path, audio_path, text, output_path="outputs/final
         )
         # --- Texte principal en blanc ---
         draw.text(position, text, font=font, fill=(255, 255, 255, 255))
-        
+
         return np.array(img)
 
     subtitles = []
     for i, segment in enumerate(segments):
         txt = textwrap.fill(segment, width=30)
-        
+
         # Méthode alternative - créer un ImageClip à partir d'une image PIL
         # Cette approche devrait fonctionner avec toutes les versions de MoviePy
         txt_img = create_text_image(txt, video.w, video.h, font_size=40)
         subtitle = ImageClip(txt_img, transparent=True) \
                   .with_duration(subtitle_duration) \
                   .with_start(i * subtitle_duration)
-        
+
         subtitles.append(subtitle)
 
     # Créer le clip final avec les sous-titres
     final_clip = CompositeVideoClip([video] + subtitles)
-    
+
     final_clip = final_clip.with_audio(video.audio)
 
     if final_clip.audio is None:
         final_clip = final_clip.with_audio(audio)
-        
+
     # Export avec paramètres optimisés
     final_clip.write_videofile(
         output_path,
@@ -82,5 +82,5 @@ def combine_video_audio(video_path, audio_path, text, output_path="outputs/final
         preset='medium',  # Changed to medium for faster encoding
         ffmpeg_params=["-crf", "22"]
     )
-    
+
     return output_path

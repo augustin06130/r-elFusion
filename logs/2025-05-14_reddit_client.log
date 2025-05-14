@@ -70,3 +70,7 @@
 2025-05-14 19:51:27,569 | reddit_client | INFO | Connexion à Reddit réussie
 2025-05-14 19:51:27,569 | reddit_client | INFO | Recherche de posts dans r/horror avec le mot-clé 'door'
 2025-05-14 19:51:28,721 | reddit_client | INFO | Meilleur post trouvé: "Question about the dog in “The Lodge”" (Score: 21)
+2025-05-14 20:03:16,522 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-14 20:03:16,825 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-14 20:03:16,825 | reddit_client | INFO | Recherche de posts dans r/horror avec le mot-clé 'door'
+2025-05-14 20:03:18,267 | reddit_client | INFO | Meilleur post trouvé: "Question about the dog in “The Lodge”" (Score: 22)

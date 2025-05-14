@@ -78,3 +78,14 @@
 2025-05-14 19:51:38,675 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
 2025-05-14 19:51:38,981 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kmavoc_1.mp4...
 2025-05-14 19:52:05,244 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kmavoc_1.mp4 (13.5 MB)
+2025-05-14 20:03:21,725 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (581 caractères)
+2025-05-14 20:03:21,726 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-14 20:03:21,726 | audio_video_processor | INFO | Conversion du texte en audio (581 caractères)
+2025-05-14 20:03:27,176 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice.mp3 (283.1 KB)
+2025-05-14 20:03:27,177 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice.mp3' et la vidéo de fond 'fond.mp4'
+2025-05-14 20:03:27,177 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-14 20:03:27,534 | audio_video_processor | INFO | Création des sous-titres pour le texte (581 caractères)
+2025-05-14 20:03:27,802 | audio_video_processor | INFO | 25 clips de sous-titres créés avec succès
+2025-05-14 20:03:27,824 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-14 20:03:27,824 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kmavoc_1.mp4...
+2025-05-14 20:04:11,039 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kmavoc_1.mp4 (14.3 MB)
