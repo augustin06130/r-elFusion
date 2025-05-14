@@ -6,111 +6,254 @@ from openai import OpenAI
 from config import parse_arguments, CLIENT_ID_REDDIT, CLIENT_SECRET_REDDIT
 from reddit_client import setup_reddit, get_reddit_text
 from text_processor import clean_reddit_text, split_text_into_chunks, setup_nltk
-from translator import translate_text_safely_gpt
-from media_generator import text_to_speech, create_video
+from translator import translate_text_with_gpt, detect_language
+from media_generator import process_video_from_text
+
+# Import des modules de gestion d'erreurs
+from handle_log_exception.logger import setup_logger, default_logger as logger
+from handle_log_exception.exceptions import (
+    RedditVideoError, ConfigError, RedditError,
+    RedditConnectionError, RedditContentError,
+    TranslationError, AudioError, VideoError
+)
+
 
 def main():
-    # Analyser les arguments
-    args = parse_arguments()
+    """
+    Fonction principale du programme
 
-    # Créer le dossier de sortie s'il n'existe pas
-    os.makedirs(args.output_dir, exist_ok=True)
-
-    # Initialiser le client OpenAI
-    client = OpenAI(api_key=args.openai_api_key)
-
-    # Se connecter à Reddit
-    reddit = setup_reddit(CLIENT_ID_REDDIT, CLIENT_SECRET_REDDIT)
-    if not reddit:
-        print("❌ Impossible de se connecter à Reddit. Vérifiez vos identifiants.")
-        return
-
-    # Récupérer le post
-    post_id, reddit_text = get_reddit_text(
-        reddit,
-        args.subreddit,
-        args.keyword,
-        args.limit
-    )
-    if not post_id:
-        print("❌ Aucun post trouvé correspondant aux critères.")
-        return
-
-    # Nettoyer le texte
-    cleaned = clean_reddit_text(reddit_text)
-
-    # Traduire le texte avec GPT
+    Orchestre tout le processus de génération de vidéos à partir de posts Reddit
+    """
     try:
-        # Vérifier que la clé API est présente
+        # Analyser les arguments
+        logger.info("Analyse des arguments de la ligne de commande")
+        try:
+            args = parse_arguments()
+            logger.debug(f"Arguments: {args}")
+        except Exception as e:
+            raise ConfigError(f"Erreur lors de l'analyse des arguments: {str(e)}") from e
+
+        # Créer le dossier de sortie s'il n'existe pas
+        try:
+            os.makedirs(args.output_dir, exist_ok=True)
+            logger.info(f"Dossier de sortie: {os.path.abspath(args.output_dir)}")
+        except Exception as e:
+            raise ConfigError(f"Impossible de créer le dossier de sortie {args.output_dir}: {str(e)}") from e
+
+        # Vérifier la clé API OpenAI
         if not args.openai_api_key:
-            print("❌ Clé API OpenAI manquante. Utilisez --openai_api_key pour fournir votre clé.")
-            return
+            raise ConfigError("Clé API OpenAI manquante. Utilisez --openai_api_key pour fournir votre clé.")
 
-        translated = translate_text_safely_gpt(
-            cleaned,
-            client,
-            args.gpt_model,
-            max_tokens=4096,
-            max_chars=args.max_chars
-        )
+        # Initialiser le client OpenAI
+        logger.info("Initialisation du client OpenAI")
+        try:
+            client = OpenAI(api_key=args.openai_api_key)
+        except Exception as e:
+            raise ConfigError(f"Erreur lors de l'initialisation du client OpenAI: {str(e)}") from e
+
+        # Se connecter à Reddit
+        logger.info("Connexion à l'API Reddit")
+        try:
+            reddit = setup_reddit(CLIENT_ID_REDDIT, CLIENT_SECRET_REDDIT)
+            if not reddit:
+                raise RedditConnectionError()
+        except RedditConnectionError as e:
+            raise
+        except Exception as e:
+            raise RedditConnectionError() from e
+
+        # Récupérer le post
+        logger.info(f"Recherche de posts dans r/{args.subreddit} avec le mot-clé '{args.keyword}'")
+        try:
+            post_id, reddit_text = get_reddit_text(
+                reddit,
+                args.subreddit,
+                args.keyword,
+                args.limit
+            )
+            if not post_id:
+                raise RedditContentError(args.subreddit, args.keyword)
+
+            logger.info(f"Post trouvé: {post_id} ({len(reddit_text)} caractères)")
+        except RedditError as e:
+            raise
+        except Exception as e:
+            raise RedditContentError(args.subreddit, args.keyword) from e
+
+        # Nettoyer le texte
+        logger.info("Nettoyage du texte récupéré")
+        try:
+            cleaned = clean_reddit_text(reddit_text)
+            logger.debug(f"Texte nettoyé: {len(cleaned)} caractères")
+        except Exception as e:
+            logger.warning(f"Erreur lors du nettoyage du texte: {str(e)}")
+            logger.warning("Utilisation du texte brut non nettoyé")
+            cleaned = reddit_text
+
+        if args.target_language != "nt": #Ne pas traduire si l'utilsateur ne choisit pas de langue cible
+
+            try:
+                source_language = detect_language(reddit_text, client, args.model)
+                logger.debug(f"Langue détectée: {source_language}")
+
+                if source_language == args.target_language:
+                    logger.info("Langue source identique à la langue cible. Pas de traduction nécessaire.")
+
+            except TranslationError:
+                logger.warning("Détection de langue échouée. Tentative de traduction quand même.")
+
+
+          # Traduire le texte avec GPT
+            if source_language == args.target_language:
+                logger.info(f"Traduction du texte avec le modèle {args.gpt_model}")
+                try:
+                    translated = translate_text_with_gpt(
+                      cleaned,
+                     client,
+                     args.gpt_model,
+                     max_tokens=4096,
+                     target_language=args.target_language,
+                     # max_chars=args.max_chars
+                  )
+                    logger.info(f"Traduction effectuée: {len(translated)} caractères")
+                except Exception as e:
+                    raise TranslationError(f"Erreur lors de la traduction avec GPT: {str(e)}") from e
+
+        # Découper le texte en morceaux
+        logger.info(f"Découpage du texte en segments de {args.chunk_size} mots")
+        try:
+            chunks = split_text_into_chunks(translated, args.chunk_size)
+            if not chunks:
+                raise RedditVideoError("Aucun segment généré après découpage.")
+
+            logger.info(f"{len(chunks)} segments créés")
+        except RedditVideoError as e:
+            raise
+        except Exception as e:
+            raise RedditVideoError(f"Erreur lors du découpage du texte: {str(e)}") from e
+
+        # Prévisualiser les segments
+        for i, chunk in enumerate(chunks):
+            word_count = len(chunk.split())
+            preview = chunk[:150] + "..." if len(chunk) > 150 else chunk
+            logger.info(f"Segment {i+1}/{len(chunks)} ({word_count} mots): {preview}")
+
+        # Création des vidéos pour chaque segment
+        success_count = 0
+        failed_segments = []
+
+        for i, chunk in enumerate(chunks):
+            segment_num = i + 1
+            logger.info(f"Traitement du segment {segment_num}/{len(chunks)}")
+
+            # Fichiers temporaires pour ce segment
+            audio_file = os.path.join(args.output_dir, f"audio_{post_id}_{segment_num}.mp3")
+            video_file = os.path.join(args.output_dir, f"video_{post_id}_{segment_num}.mp4")
+
+            try:
+                # Déterminer la langue pour la voix
+                voice_language = args.target_language
+                if voice_language == "nt":  # No translation
+                    voice_language = "fr"
+
+                # Génération de la vidéo à partir du texte
+                logger.info(f"Création de la vidéo pour le segment {segment_num}")
+                success = process_video_from_text(
+                    chunk,
+                    args.background,
+                    video_file,
+                    voice_language
+                )
+
+                if success:
+                    success_count += 1
+                    logger.info(f"Vidéo {segment_num} créée avec succès: {video_file}")
+                else:
+                    failed_segments.append(segment_num)
+                    logger.error(f"Échec de la création de la vidéo pour le segment {segment_num}")
+
+            except AudioError as e:
+                failed_segments.append(segment_num)
+                logger.error(f"Erreur audio pour le segment {segment_num}: {e}")
+                continue
+
+            except VideoError as e:
+                failed_segments.append(segment_num)
+                logger.error(f"Erreur vidéo pour le segment {segment_num}: {e}")
+                continue
+
+            except Exception as e:
+                failed_segments.append(segment_num)
+                logger.error(f"Erreur inattendue pour le segment {segment_num}: {e}")
+                continue
+
+        # Résumé final
+        logger.info("=== RÉSUMÉ DE L'EXÉCUTION ===")
+        logger.info(f"Post: {post_id}")
+        logger.info(f"Modèle GPT utilisé: {args.gpt_model}")
+        logger.info(f"Segments traités: {len(chunks)}")
+        logger.info(f"Vidéos créées avec succès: {success_count}/{len(chunks)}")
+
+        if failed_segments:
+            logger.warning(f"Segments en échec: {', '.join(map(str, failed_segments))}")
+
+        logger.info(f"Dossier de sortie: {os.path.abspath(args.output_dir)}")
+
+        # Retourner un code d'erreur si certains segments ont échoué
+        if failed_segments and len(failed_segments) == len(chunks):
+            raise RedditVideoError("Tous les segments ont échoué lors de la génération des vidéos.")
+
+        return success_count, len(chunks), os.path.abspath(args.output_dir)
+
+    except ConfigError as e:
+        logger.critical(f"Erreur de configuration: {e}")
+        return None
+
+    except RedditConnectionError as e:
+        logger.critical(f"Erreur de connexion à Reddit: {e}")
+        return None
+
+    except RedditContentError as e:
+        logger.critical(f"Erreur de contenu Reddit: {e}")
+        return None
+
+    except TranslationError as e:
+        logger.critical(f"Erreur de traduction: {e}")
+        return None
+
+    except RedditVideoError as e:
+        logger.critical(f"Erreur fatale: {e}")
+        return None
+
     except Exception as e:
-        print(f"❌ Erreur fatale lors de la traduction avec GPT: {e}")
-        return
-
-    # Découper le texte en morceaux
-    chunks = split_text_into_chunks(translated, args.chunk_size)
-    if not chunks:
-        print("❌ Aucun segment généré après découpage.")
-        return
-
-    # Prévisualiser les segments
-    for i, chunk in enumerate(chunks):
-        word_count = len(chunk.split())
-        preview = chunk[:150] + "..." if len(chunk) > 150 else chunk
-        print(f"\n--- Segment {i+1}/{len(chunks)} ({word_count} mots) ---")
-        print(preview)
-
-    # Création des vidéos pour chaque segment
-    success_count = 0
-    for i, chunk in enumerate(chunks):
-        segment_num = i + 1
-        print(f"\n=== Traitement du segment {segment_num}/{len(chunks)} ===")
-
-        # Fichiers temporaires pour ce segment
-        audio_file = os.path.join(args.output_dir, f"audio_{post_id}_{segment_num}.mp3")
-        video_file = os.path.join(args.output_dir, f"video_{post_id}_{segment_num}.mp4")
-
-        # Génération de l'audio
-        print(f"🔊 Création de la voix pour le segment {segment_num}...")
-        if not text_to_speech(chunk, audio_file):
-            print(f"⚠️ Passé au segment suivant.")
-            continue
-
-        # Création de la vidéo
-        if create_video(audio_file, args.background, video_file):
-            success_count += 1
-            print(f"✅ Vidéo {segment_num} créée: {video_file}")
-        else:
-            print(f"❌ Échec de la création de la vidéo {segment_num}")
-
-    # Résumé final
-    print(f"\n====== RÉSUMÉ ======")
-    print(f"Post: {post_id}")
-    print(f"Modèle GPT utilisé: {args.gpt_model}")
-    print(f"Segments traités: {len(chunks)}")
-    print(f"Vidéos créées avec succès: {success_count}")
-    print(f"Dossier de sortie: {os.path.abspath(args.output_dir)}")
-    print("===================")
+        logger.critical(f"Erreur non gérée: {e}", exc_info=True)
+        return None
 
 if __name__ == "__main__":
-    # Configuration initiale de NLTK
-    setup_nltk()
-
     try:
-        main()
+        # Configuration initiale de NLTK
+        setup_nltk()
+
+        # Exécution du programme principal
+        result = main()
+
+        # Gestion du code de sortie
+        if result is None:
+            logger.critical("Le programme s'est terminé avec des erreurs")
+            sys.exit(1)
+        else:
+            success_count, total_count, output_dir = result
+            # Si certains segments ont échoué mais pas tous
+            if success_count < total_count:
+                logger.warning(f"Programme terminé avec des avertissements: {success_count}/{total_count} vidéos créées")
+                sys.exit(0)  # On considère que c'est un succès partiel
+            else:
+                logger.info(f"Programme terminé avec succès: {success_count}/{total_count} vidéos créées")
+                sys.exit(0)
+
     except KeyboardInterrupt:
-        print("\n\n⚠️ Programme interrompu par l'utilisateur.")
+        logger.warning("Programme interrompu par l'utilisateur")
         sys.exit(1)
     except Exception as e:
-        print(f"\n❌ Erreur non gérée: {e}")
+        logger.critical(f"Erreur critique non gérée: {e}", exc_info=True)
         sys.exit(1)

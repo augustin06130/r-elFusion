@@ -1,0 +1,134 @@
+2025-05-14 03:26:32,225 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 03:26:32,226 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 03:26:32,226 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 03:26:32,255 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 03:26:32,256 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 03:26:33,897 | reddit_video | INFO | Post trouvé: 1klo2ks (19500 caractères)
+2025-05-14 03:26:33,897 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 03:26:33,902 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 03:26:33,902 | reddit_video | INFO | Traduction effectuée: 19445 caractères
+2025-05-14 03:26:33,902 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 03:26:33,946 | reddit_video | INFO | 19 segments créés
+2025-05-14 03:26:33,946 | reddit_video | INFO | Segment 1/19 (176 mots): The thing I pulled from the ocean is changing me - part 1. It was a little past 7:00am on a particularly humid Monday morning when I first discovered ...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 2/19 (198 mots): Looking back now, I can’t help but wonder how different things might have turned out, had I just continued walking, left the thing to whichever grizzl...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 3/19 (190 mots): A thick film of sweat had formed all over our bodies, making our shirts (Hawaiian short-sleeve for me, navy polo for Nel) cling uncomfortably to our b...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 4/19 (200 mots): Better to be safe, let the proper authorities take care of it. It was the only reasonable thing to do. Only we didn’t do that. To this day, I’m not su...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 5/19 (200 mots): I’m not proud of how I manipulated him. Or the things I did later—which, again, I’ll get to. Sure, there’s a chance it was just the Creature working i...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 6/19 (186 mots): In an effort to better accommodate our new friend, we’d gone and brought over one of the industrial-sized drums Nel used to collect rainwater for his ...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 7/19 (200 mots): Naming it felt counterintuitive; to the best of my knowledge, people did not normally name a thing they knew they would eventually have to give away. ...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 8/19 (195 mots): It meant nothing to me, of course. Little more than a jumble of syllables. But then, it wasn’t my word, was it? Meanwhile, Nel was looking at me like ...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 9/19 (200 mots): I sat on the edge of my couch for a long time after, staring at the barrel, and the unassuming little creature inside. I wondered if we had made the r...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 10/19 (197 mots): True to his word, Nel returned the next morning, bearing gifts of a nature that initially surprised me. Among these were a digital camera (the type wh...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 11/19 (191 mots): And that goldfish had died. Nel, on the other hand, was once married with children. Owned his own business. Say what you want about the guy, but he un...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 12/19 (173 mots): There, on my porch, stood a girl of around thirteen years of age. She wore a khaki skirt and a mint-green sleeveless jacket, the type with badges pinn...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 13/19 (197 mots): Tourist-season had arrived by this point, the beaches and towns all but overrun by flocks of holiday-goers and people looking to let their hair down f...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 14/19 (189 mots): At first I thought it was just my age (when you get to be as old as I am, discovering a new ailment every other day or so is just par for the course)....
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 15/19 (195 mots): He was standing before the water's edge, staring fixedly out at it as though trying to see something far off on the horizon. There was a look on his f...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 16/19 (199 mots): Nel had been besotted with the Creature. Now he wanted me to get rid of him? What? “But why—”
+
+“I’m serious, Hal,” he overrode me. “That thing in ther...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 17/19 (198 mots): “I’ve said what I came here to say. What you do with it is up to you.”
+
+He turned and began shuffling along the beach then, but not before turning bac...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 18/19 (191 mots): Despite the fact visitors to this part of Florida’s coast were scarce at best, the possibility—probable or not—that someone might stumble upon my disc...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Segment 19/19 (108 mots): I’m sure deep down some part of me must have known. And yet still, I had gone along with it, believed the lies, even as the part of me that was still ...
+2025-05-14 03:26:33,947 | reddit_video | INFO | Traitement du segment 1/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 1: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 2/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 2
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 2: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 3/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 3
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 3: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 4/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 4
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 4: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 5/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 5
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 5: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 6/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 6
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 6: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 7/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 7
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 7: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 8/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 8
+2025-05-14 03:26:33,948 | reddit_video | ERROR | Erreur inattendue pour le segment 8: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,948 | reddit_video | INFO | Traitement du segment 9/19
+2025-05-14 03:26:33,948 | reddit_video | INFO | Création de la vidéo pour le segment 9
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 9: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 10/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 10
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 10: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 11/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 11
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 11: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 12/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 12
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 12: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 13/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 13
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 13: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 14/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 14
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 14: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 15/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 15
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 15: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,949 | reddit_video | INFO | Traitement du segment 16/19
+2025-05-14 03:26:33,949 | reddit_video | INFO | Création de la vidéo pour le segment 16
+2025-05-14 03:26:33,949 | reddit_video | ERROR | Erreur inattendue pour le segment 16: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,950 | reddit_video | INFO | Traitement du segment 17/19
+2025-05-14 03:26:33,950 | reddit_video | INFO | Création de la vidéo pour le segment 17
+2025-05-14 03:26:33,950 | reddit_video | ERROR | Erreur inattendue pour le segment 17: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,950 | reddit_video | INFO | Traitement du segment 18/19
+2025-05-14 03:26:33,950 | reddit_video | INFO | Création de la vidéo pour le segment 18
+2025-05-14 03:26:33,950 | reddit_video | ERROR | Erreur inattendue pour le segment 18: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,950 | reddit_video | INFO | Traitement du segment 19/19
+2025-05-14 03:26:33,950 | reddit_video | INFO | Création de la vidéo pour le segment 19
+2025-05-14 03:26:33,950 | reddit_video | ERROR | Erreur inattendue pour le segment 19: name 'process_video_from_text' is not defined
+2025-05-14 03:26:33,950 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 03:26:33,950 | reddit_video | INFO | Post: 1klo2ks
+2025-05-14 03:26:33,950 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 03:26:33,950 | reddit_video | INFO | Segments traités: 19
+2025-05-14 03:26:33,950 | reddit_video | INFO | Vidéos créées avec succès: 0/19
+2025-05-14 03:26:33,950 | reddit_video | WARNING | Segments en échec: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+2025-05-14 03:26:33,950 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 03:26:33,950 | reddit_video | CRITICAL | Erreur fatale: Tous les segments ont échoué lors de la génération des vidéos.
+2025-05-14 03:26:33,952 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-14 03:34:36,294 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-14 03:34:36,295 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 03:34:36,295 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-14 03:34:36,326 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-14 03:34:36,327 | reddit_video | INFO | Recherche de posts dans r/creepypasta avec le mot-clé 'door'
+2025-05-14 03:34:37,578 | reddit_video | INFO | Post trouvé: 1klywxq (3819 caractères)
+2025-05-14 03:34:37,578 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-14 03:34:37,580 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-14 03:34:37,580 | reddit_video | INFO | Traduction effectuée: 3135 caractères
+2025-05-14 03:34:37,580 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-14 03:34:37,652 | reddit_video | INFO | 4 segments créés
+2025-05-14 03:34:37,652 | reddit_video | INFO | Segment 1/4 (194 mots): I'm feeling watched.... # I've not slept in 3 days, and something is waiting for me... It all started May 11th when I got home, I felt something was o...
+2025-05-14 03:34:37,652 | reddit_video | INFO | Segment 2/4 (177 mots): As I was heading down the stairs, I heard something fall downstairs. I ran back to my room, locked the door as quick as possible but nothing came, so ...
+2025-05-14 03:34:37,652 | reddit_video | INFO | Segment 3/4 (197 mots): That's when I saw it, meanwhile I was heading down I saw IT, the thing that had been watching me all day and got me restless. IT was black, pure black...
+2025-05-14 03:34:37,652 | reddit_video | INFO | Segment 4/4 (57 mots): But why?, why me? I've been a good person my whole life, I work from 12pm to 8pm (I work in a 24/7 retail store) and I haven't done anything bad to an...
+2025-05-14 03:34:37,652 | reddit_video | INFO | Traitement du segment 1/4
+2025-05-14 03:34:37,652 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-14 03:35:48,901 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1klywxq_1.mp4
+2025-05-14 03:35:48,902 | reddit_video | INFO | Traitement du segment 2/4
+2025-05-14 03:35:48,902 | reddit_video | INFO | Création de la vidéo pour le segment 2
+2025-05-14 03:36:49,296 | reddit_video | INFO | Vidéo 2 créée avec succès: output/video_1klywxq_2.mp4
+2025-05-14 03:36:49,296 | reddit_video | INFO | Traitement du segment 3/4
+2025-05-14 03:36:49,296 | reddit_video | INFO | Création de la vidéo pour le segment 3
+2025-05-14 03:37:55,107 | reddit_video | INFO | Vidéo 3 créée avec succès: output/video_1klywxq_3.mp4
+2025-05-14 03:37:55,108 | reddit_video | INFO | Traitement du segment 4/4
+2025-05-14 03:37:55,108 | reddit_video | INFO | Création de la vidéo pour le segment 4
+2025-05-14 03:38:17,439 | reddit_video | INFO | Vidéo 4 créée avec succès: output/video_1klywxq_4.mp4
+2025-05-14 03:38:17,440 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-14 03:38:17,440 | reddit_video | INFO | Post: 1klywxq
+2025-05-14 03:38:17,440 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-14 03:38:17,440 | reddit_video | INFO | Segments traités: 4
+2025-05-14 03:38:17,440 | reddit_video | INFO | Vidéos créées avec succès: 4/4
+2025-05-14 03:38:17,440 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-14 03:38:17,442 | reddit_video | INFO | Programme terminé avec succès: 4/4 vidéos créées

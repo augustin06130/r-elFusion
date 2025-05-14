@@ -24,9 +24,12 @@ def parse_arguments():
     parser.add_argument("--background", default="fond.mp4", help="Vidéo de fond à utiliser")
     parser.add_argument("--output_dir", default="output", help="Dossier pour les fichiers de sortie")
     parser.add_argument("--max_chars", type=int, default=3000,
-                      help="Nombre maximum de caractères par chunk pour GPT")
+                        help="Nombre maximum de caractères par chunk pour GPT")
     parser.add_argument("--openai_api_key", default=OPENAI_API_KEY,
-                    help="Clé API OpenAI à utiliser")
+                        help="Clé API OpenAI à utiliser")
     parser.add_argument("--gpt_model", default=GPT_MODEL,
-                      help="Modèle GPT à utiliser (par défaut : gpt-3.5-turbo)")
+                        help="Modèle GPT à utiliser (par défaut : gpt-3.5-turbo)")
+    parser.add_argument("--target_language", default="nt",
+                        help="Langue cible pour la traduction (code ISO 639-1, ex: 'fr', 'en')")
+
     return parser.parse_args()

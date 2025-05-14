@@ -2,15 +2,89 @@ import re
 import time
 from openai import OpenAI
 
-def translate_text_with_gpt(text, client, model, max_tokens, retry_count=3, wait_time=2):
+# Import des modules de gestion d'erreurs
+from handle_log_exception.logger import setup_logger
+from handle_log_exception.exceptions import TranslationError
+
+# Création d'un logger spécifique pour ce module
+logger = setup_logger("translator")
+
+
+def detect_language(text, client, model="gpt-4"):
     """
-    Traduit un texte anglais en français en utilisant l'API GPT.
-    Inclut des mécanismes de retry en cas d'échec.
+    Utilise GPT pour détecter la langue du texte fourni.
+
+    Args:
+        text: Texte à analyser
+        client: Client OpenAI
+        model: Modèle GPT à utiliser
+
+    Returns:
+        str: Code langue détectée (ex: 'fr', 'en')
     """
-    prompt = "Tu es un expert de la traduction anglo-française avec 20 ans d'expérience. Traduis le texte suivant de l'anglais vers le français de la manière la plus fluide possible, en évitant une traduction littérale. Comprends bien le contexte pour produire une traduction naturelle et fidèle à l'intention de l'auteur."
+    try:
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": "Tu es un assistant qui détecte la langue d'un texte. Réponds uniquement avec le code ISO 639-1 de la langue (ex: fr, en, es, etc.)."},
+                {"role": "user", "content": text}
+            ],
+            temperature=0.0,
+            max_tokens=5,
+            timeout=30
+        )
+        language = response.choices[0].message.content.strip().lower()
+        if re.match(r"^[a-z]{2}$", language):
+            return language
+        else:
+            raise ValueError(f"Code langue inattendu : {language}")
+    except Exception as e:
+        logger.error(f"Erreur lors de la détection de la langue : {e}")
+        raise TranslationError(f"Erreur détection langue: {e}")
+
+
+def translate_text_with_gpt(text, client, model, max_tokens, target_language, retry_count=3, wait_time=2):
+    """
+    Traduit un texte d'une langue source détectée vers une langue cible avec GPT.
+    Ignore la traduction si la langue source est identique à la langue cible.
+
+    Args:
+        text: Texte à traduire
+        client: Client OpenAI
+        model: Modèle GPT à utiliser
+        max_tokens: Nombre maximal de tokens pour la réponse
+        target_language: Langue cible (code ISO 639-1, ex: 'fr', 'en')
+        retry_count: Nombre de tentatives en cas d'échec
+        wait_time: Temps d'attente entre les tentatives
+
+    Returns:
+        str: Texte traduit ou original si la traduction n'est pas nécessaire
+
+    Raises:
+        TranslationError: Si la traduction échoue après toutes les tentatives
+    """
+    # if target_language == "nt": #Ne pas traduire si l'utilsateur ne choisit pas de langue cible
+    #     return text
+    # try:
+    #     source_language = detect_language(text, client, model)
+    #     logger.debug(f"Langue détectée: {source_language}")
+
+    # if source_language == target_language:
+    #     logger.info("Langue source identique à la langue cible. Pas de traduction nécessaire.")
+    #     return text
+
+    # except TranslationError:
+    #     logger.warning("Détection de langue échouée. Tentative de traduction quand même.")
+
+    prompt = f"Tu es un expert en traduction depuis 20 ans. Traduis le texte suivant de manière naturelle et fidèle à l’intention de l’auteur. Traduis de {source_language.upper()} vers {target_language.upper()}."
+
+    current_wait = wait_time
+    last_error = None
 
     for attempt in range(retry_count):
         try:
+            logger.debug(f"Tentative de traduction {attempt+1}/{retry_count}")
+
             response = client.chat.completions.create(
                 model=model,
                 messages=[
@@ -25,70 +99,19 @@ def translate_text_with_gpt(text, client, model, max_tokens, retry_count=3, wait
             translated_text = response.choices[0].message.content.strip()
 
             if translated_text:
+                logger.debug("Traduction réussie")
                 return translated_text
             else:
-                print(f"⚠️ Réponse vide reçue (tentative {attempt+1}/{retry_count})")
+                logger.warning(f"Réponse vide reçue (tentative {attempt+1}/{retry_count})")
+                last_error = "Réponse vide de l'API"
 
         except Exception as e:
-            print(f"⚠️ Erreur lors de la traduction GPT: {e} (tentative {attempt+1}/{retry_count})")
+            logger.warning(f"Erreur lors de la traduction GPT: {str(e)} (tentative {attempt+1}/{retry_count})")
+            last_error = str(e)
 
-        # Attente avant retry
         if attempt < retry_count - 1:
-            print(f"⏳ Attente de {wait_time} secondes avant nouvelle tentative...")
-            time.sleep(wait_time)
-            wait_time *= 1.5
+            logger.debug(f"Nouvelle tentative dans {current_wait}s")
+            time.sleep(current_wait)
+            current_wait *= 2
 
-    # En cas d'échec après toutes les tentatives
-    print("❌ Échec de la traduction GPT après plusieurs tentatives")
-    return text  # Retourner le texte original en cas d'échec complet
-
-def translate_text_safely_gpt(text, client, model, max_tokens, max_chars=3000):
-    """
-    Traduit un texte long en le découpant en morceaux pour l'API GPT.
-    Affiche la progression et chaque morceau traduit.
-    """
-    print(f"🌐 Traduction du texte en français avec GPT ({model})...")
-
-    # Découpe le texte en blocs sans couper au milieu des phrases
-    sentences = re.split(r'(?<=[.!?]) +', text)
-    chunks = []
-    current_chunk = ""
-
-    # Créer les chunks
-    for sentence in sentences:
-        if len(current_chunk) + len(sentence) <= max_chars:
-            current_chunk += sentence + " "
-        else:
-            chunks.append(current_chunk.strip())
-            current_chunk = sentence + " "
-
-    # Ajouter le dernier chunk s'il contient du texte
-    if current_chunk.strip():
-        chunks.append(current_chunk.strip())
-
-    print(f"  🧩 Le texte a été divisé en {len(chunks)} morceaux pour la traduction")
-
-    # Traduire chaque chunk avec indication de progression
-    translated_chunks = []
-    for i, chunk in enumerate(chunks):
-        chunk_number = i + 1
-        print(f"\n  🔄 Traduction du morceau {chunk_number}/{len(chunks)} ({len(chunk)} caractères)...")
-
-        # Afficher un aperçu du texte à traduire
-        preview = chunk[:100] + "..." if len(chunk) > 100 else chunk
-        print(f"  📝 Texte source: {preview}")
-
-        # Traduire le morceau
-        translated = translate_text_with_gpt(chunk, client, model, max_tokens)
-
-        # Afficher un aperçu de la traduction
-        translated_preview = translated[:100] + "..." if len(translated) > 100 else translated
-        print(f"  🇫🇷 Traduction: {translated_preview}")
-
-        translated_chunks.append(translated)
-
-    # Assembler tous les morceaux traduits
-    full_translation = " ".join(translated_chunks)
-    print(f"\n✅ Traduction terminée ({len(full_translation)} caractères)")
-
-    return full_translation
+    raise TranslationError(f"Échec de traduction après {retry_count} tentatives: {last_error}")
