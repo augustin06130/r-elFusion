@@ -154,3 +154,75 @@
 2025-05-15 19:06:56,414 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
 2025-05-15 19:06:56,414 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kfjrml_Opened_the_door_to_m_segment2_fr.mp4...
 2025-05-15 19:07:28,181 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kfjrml_Opened_the_door_to_m_segment2_fr.mp4 (4.8 MB)
+2025-05-15 19:27:40,840 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1014 caractères)
+2025-05-15 19:27:40,840 | audio_video_processor | INFO | Segment 1/3
+2025-05-15 19:27:40,840 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 19:27:40,840 | audio_video_processor | INFO | Conversion du texte en audio (1014 caractères)
+2025-05-15 19:27:56,390 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_0.mp3 (501.2 KB)
+2025-05-15 19:27:56,391 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_0.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 19:27:56,391 | audio_video_processor | INFO | Segment 1/3
+2025-05-15 19:27:56,391 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 19:27:56,654 | audio_video_processor | INFO | Création des sous-titres pour le texte (1014 caractères)
+2025-05-15 19:27:57,037 | audio_video_processor | INFO | 48 clips de sous-titres créés avec succès
+2025-05-15 19:27:57,053 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-15 19:27:57,053 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kcq07j_Strange_experience_w_segment1_fr.mp4...
+2025-05-15 19:28:55,287 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kcq07j_Strange_experience_w_segment1_fr.mp4 (14.2 MB)
+2025-05-15 19:28:55,314 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1079 caractères)
+2025-05-15 19:28:55,314 | audio_video_processor | INFO | Segment 2/3
+2025-05-15 19:28:55,314 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 19:28:55,314 | audio_video_processor | INFO | Conversion du texte en audio (1079 caractères)
+2025-05-15 19:29:08,663 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_1.mp3 (511.9 KB)
+2025-05-15 19:29:08,664 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_1.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 19:29:08,664 | audio_video_processor | INFO | Segment 2/3
+2025-05-15 19:29:08,664 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 19:29:09,109 | audio_video_processor | INFO | Création des sous-titres pour le texte (1079 caractères)
+2025-05-15 19:29:09,535 | audio_video_processor | INFO | 50 clips de sous-titres créés avec succès
+2025-05-15 19:29:09,554 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-15 19:29:09,554 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kcq07j_Strange_experience_w_segment2_fr.mp4...
+2025-05-15 19:30:08,979 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kcq07j_Strange_experience_w_segment2_fr.mp4 (13.4 MB)
+2025-05-15 19:30:09,004 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (90 caractères)
+2025-05-15 19:30:09,004 | audio_video_processor | INFO | Segment 3/3
+2025-05-15 19:30:09,004 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 19:30:09,004 | audio_video_processor | INFO | Conversion du texte en audio (90 caractères)
+2025-05-15 19:30:09,625 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_2.mp3 (46.7 KB)
+2025-05-15 19:30:09,626 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_2.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 19:30:09,626 | audio_video_processor | INFO | Segment 3/3
+2025-05-15 19:30:09,626 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 19:30:10,131 | audio_video_processor | INFO | Création des sous-titres pour le texte (90 caractères)
+2025-05-15 19:30:10,176 | audio_video_processor | INFO | 4 clips de sous-titres créés avec succès
+2025-05-15 19:30:10,192 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-15 19:30:10,192 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kcq07j_Strange_experience_w_segment3_fr.mp4...
+2025-05-15 19:30:17,013 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kcq07j_Strange_experience_w_segment3_fr.mp4 (2.0 MB)
+2025-05-15 19:44:45,896 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1027 caractères)
+2025-05-15 19:44:45,896 | audio_video_processor | INFO | Segment 1/2
+2025-05-15 19:44:45,896 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 19:44:45,896 | audio_video_processor | INFO | Conversion du texte en audio (1027 caractères)
+2025-05-15 19:44:58,656 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_0.mp3 (506.2 KB)
+2025-05-15 19:44:58,656 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_0.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 19:44:58,656 | audio_video_processor | INFO | Segment 1/2
+2025-05-15 19:44:58,657 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 19:44:58,934 | audio_video_processor | INFO | Suivi des segments vidéo réinitialisé
+2025-05-15 19:44:58,934 | audio_video_processor | INFO | Premier segment, démarrage à 0 seconde
+2025-05-15 19:44:58,934 | audio_video_processor | INFO | Position de départ pour le segment 1: 0.00s
+2025-05-15 19:44:58,935 | audio_video_processor | INFO | Durée audio: 64.80s (avec tampon: 66.30s)
+2025-05-15 19:44:58,935 | audio_video_processor | INFO | Création des sous-titres pour le texte (1027 caractères)
+2025-05-15 19:44:59,324 | audio_video_processor | INFO | 48 clips de sous-titres créés avec succès
+2025-05-15 19:44:59,339 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-15 19:44:59,339 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kfjrml_Opened_the_door_to_m_segment1_fr.mp4...
+2025-05-15 19:45:48,545 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kfjrml_Opened_the_door_to_m_segment1_fr.mp4 (8.4 MB)
+2025-05-15 19:45:48,570 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (529 caractères)
+2025-05-15 19:45:48,570 | audio_video_processor | INFO | Segment 2/2
+2025-05-15 19:45:48,570 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 19:45:48,571 | audio_video_processor | INFO | Conversion du texte en audio (529 caractères)
+2025-05-15 19:45:56,238 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_1.mp3 (260.6 KB)
+2025-05-15 19:45:56,239 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_1.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 19:45:56,239 | audio_video_processor | INFO | Segment 2/2
+2025-05-15 19:45:56,239 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 19:45:56,587 | audio_video_processor | INFO | Segment 2: démarrage à 66.3 secondes (basé sur 1 segments précédents)
+2025-05-15 19:45:56,587 | audio_video_processor | INFO | Position de départ pour le segment 2: 66.30s
+2025-05-15 19:45:56,587 | audio_video_processor | INFO | Durée audio: 33.36s (avec tampon: 34.86s)
+2025-05-15 19:45:56,716 | audio_video_processor | INFO | Création des sous-titres pour le texte (529 caractères)
+2025-05-15 19:45:56,932 | audio_video_processor | INFO | 25 clips de sous-titres créés avec succès
+2025-05-15 19:45:56,949 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-15 19:45:56,949 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kfjrml_Opened_the_door_to_m_segment2_fr.mp4...
+2025-05-15 19:46:21,784 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kfjrml_Opened_the_door_to_m_segment2_fr.mp4 (4.2 MB)

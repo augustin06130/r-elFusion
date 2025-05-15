@@ -108,3 +108,27 @@
 2025-05-15 19:02:50,415 | reddit_client | INFO | Post rejeté: . Ce texte est une liste de subreddits et d'instructions, il ne s'agit pas d'une histoire narrative ou d'un article intéressant pour TikTok.
 2025-05-15 19:02:50,415 | reddit_client | INFO | Validation du post: "Opened the door to my husband who didn’t move or say anything" (Score: 1164)
 2025-05-15 19:02:51,326 | reddit_client | INFO | Post validé: "Opened the door to my husband who didn’t move or say anything"
+2025-05-15 19:19:45,227 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 19:19:45,605 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 19:19:45,605 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 19:19:45,605 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 19:19:47,419 | reddit_client | INFO | Validation du post: "helpful "Should I post my story?" flow chart" (Score: 2724)
+2025-05-15 19:19:49,513 | reddit_client | INFO | Post rejeté: , Ce texte n'est pas une histoire narrative ou un article intéressant à publier sur TikTok. Il s'agit d'une liste de subreddits liés à différents sujets, donc pas approprié pour une publication de contenu sur TikTok.
+2025-05-15 19:19:49,513 | reddit_client | INFO | Validation du post: "Opened the door to my husband who didn’t move or say anything" (Score: 1166)
+2025-05-15 19:19:50,424 | reddit_client | INFO | Post rejeté: , ce texte ne convient pas pour être lu et publié sur TikTok car il raconte une anecdote personnelle étrange sans fournir un contenu engageant ou pertinent pour une diffusion sur cette plateforme.
+2025-05-15 19:19:50,424 | reddit_client | INFO | Validation du post: "Moderation Policy 101" (Score: 795)
+2025-05-15 19:19:51,653 | reddit_client | INFO | Post rejeté: , car il s'agit d'un guide sur les règles de publication pour le subreddit /r/Glitch_in_the_Matrix et n'est pas une histoire narrative ou un article intéressant pour TikTok.
+2025-05-15 19:19:51,654 | reddit_client | INFO | Validation du post: "Strange experience with the moon tonight" (Score: 444)
+2025-05-15 19:19:52,178 | reddit_client | INFO | Post validé: "Strange experience with the moon tonight"
+2025-05-15 19:40:53,382 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 19:40:53,383 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 19:40:53,383 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 19:40:53,383 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 19:41:14,961 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 19:41:14,962 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 19:41:14,962 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 19:41:14,962 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 19:41:16,733 | reddit_client | INFO | Validation du post: "helpful "Should I post my story?" flow chart" (Score: 2718)
+2025-05-15 19:41:19,705 | reddit_client | INFO | Post rejeté: . Ce texte semble être une liste de sous-reddits et des indications pour les utilisateurs quant à la pertinence de leurs publications, et non une histoire narrative ou un article intéressant pour TikTok.
+2025-05-15 19:41:19,706 | reddit_client | INFO | Validation du post: "Opened the door to my husband who didn’t move or say anything" (Score: 1162)
+2025-05-15 19:41:21,540 | reddit_client | INFO | Post validé: "Opened the door to my husband who didn’t move or say anything"
