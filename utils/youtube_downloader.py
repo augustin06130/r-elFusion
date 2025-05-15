@@ -1,7 +1,7 @@
 import yt_dlp
 from moviepy import VideoFileClip
 
-def download_video(url, output_path="outputs/video_yt.mp4"):
+def download_video(url, output_path="long_background.mp4"):
     ydl_opts = {
         'format': 'bestvideo[ext=mp4]',
         'merge_output_format': 'mp4',
@@ -12,8 +12,7 @@ def download_video(url, output_path="outputs/video_yt.mp4"):
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download([url])
-
-    return crop_to_9_16(output_path)
+    # return crop_to_9_16(output_path)
 
 
 def crop_to_9_16(input_path, output_path="outputs/video.mp4"):
