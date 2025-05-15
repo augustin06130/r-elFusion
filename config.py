@@ -21,7 +21,7 @@ def parse_arguments():
     parser.add_argument("--keyword", default="the", help="Mot-clé pour rechercher des posts")
     parser.add_argument("--limit", type=int, default=20, help="Nombre de posts à vérifier")
     parser.add_argument("--chunk_size", type=int, default=200, help="Nombre de mots par segment vidéo")
-    parser.add_argument("--background", default="fond.mp4", help="Vidéo de fond à utiliser")
+    parser.add_argument("--background", default="video.mp4", help="Vidéo de fond à utiliser")
     parser.add_argument("--output_dir", default="output", help="Dossier pour les fichiers de sortie")
     parser.add_argument("--max_chars", type=int, default=3000,
                         help="Nombre maximum de caractères par chunk pour GPT")

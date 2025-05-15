@@ -1,0 +1,54 @@
+2025-05-15 03:14:49,522 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-15 03:14:49,524 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-15 03:14:49,524 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-15 03:14:49,567 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-15 03:14:49,939 | reddit_video | INFO | Recherche de posts dans r/creepypasta
+2025-05-15 03:14:53,824 | reddit_video | INFO | Post trouvé: 1kkxpxq (1363 caractères)
+2025-05-15 03:14:53,824 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-15 03:14:54,631 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-15 03:14:58,937 | reddit_video | INFO | Traduction effectuée: 1519 caractères
+2025-05-15 03:14:58,938 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-15 03:14:58,984 | reddit_video | INFO | 2 segments créés
+2025-05-15 03:14:58,984 | reddit_video | INFO | Segment 1/2 (199 mots): Je ne commente pas habituellement sur des endroits comme celui-ci. Je suis un observateur. Je l'ai toujours été. Mais après ce qui a été posté hier, j...
+2025-05-15 03:14:58,984 | reddit_video | INFO | Segment 2/2 (56 mots): Il ne dort pas. Il n'oublie pas. Espèce d'égoïste. Vous vouliez juste du temps. Et maintenant, le monde entier a un pied dans son monde. Mille morts s...
+2025-05-15 03:14:58,984 | reddit_video | INFO | Traitement du segment 1/2
+2025-05-15 03:14:58,984 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-15 03:15:15,729 | reddit_video | ERROR | Échec de la création de la vidéo pour le segment 1
+2025-05-15 03:15:15,730 | reddit_video | INFO | Traitement du segment 2/2
+2025-05-15 03:15:15,730 | reddit_video | INFO | Création de la vidéo pour le segment 2
+2025-05-15 03:15:21,946 | reddit_video | ERROR | Échec de la création de la vidéo pour le segment 2
+2025-05-15 03:15:21,946 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-15 03:15:21,946 | reddit_video | INFO | Post: 1kkxpxq
+2025-05-15 03:15:21,946 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-15 03:15:21,946 | reddit_video | INFO | Segments traités: 2
+2025-05-15 03:15:21,946 | reddit_video | INFO | Vidéos créées avec succès: 0/2
+2025-05-15 03:15:21,946 | reddit_video | WARNING | Segments en échec: 1, 2
+2025-05-15 03:15:21,946 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-15 03:15:21,946 | reddit_video | CRITICAL | Erreur fatale: Tous les segments ont échoué lors de la génération des vidéos.
+2025-05-15 03:15:21,947 | reddit_video | CRITICAL | Le programme s'est terminé avec des erreurs
+2025-05-15 03:15:50,274 | reddit_video | INFO | Analyse des arguments de la ligne de commande
+2025-05-15 03:15:50,276 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-15 03:15:50,276 | reddit_video | INFO | Initialisation du client OpenAI
+2025-05-15 03:15:50,317 | reddit_video | INFO | Connexion à l'API Reddit
+2025-05-15 03:15:50,319 | reddit_video | INFO | Recherche de posts dans r/creepypasta
+2025-05-15 03:15:53,221 | reddit_video | INFO | Post trouvé: 1kkxpxq (1363 caractères)
+2025-05-15 03:15:53,221 | reddit_video | INFO | Nettoyage du texte récupéré
+2025-05-15 03:15:53,818 | reddit_video | INFO | Traduction du texte avec le modèle gpt-3.5-turbo
+2025-05-15 03:15:57,217 | reddit_video | INFO | Traduction effectuée: 1543 caractères
+2025-05-15 03:15:57,217 | reddit_video | INFO | Découpage du texte en segments de 200 mots
+2025-05-15 03:15:57,260 | reddit_video | INFO | 2 segments créés
+2025-05-15 03:15:57,260 | reddit_video | INFO | Segment 1/2 (199 mots): Je ne commente généralement pas sur des endroits comme celui-ci. Je suis un observateur. Je l'ai toujours été. Mais après ce qui a été publié hier, je...
+2025-05-15 03:15:57,260 | reddit_video | INFO | Segment 2/2 (58 mots): Il ne dort pas. Il n'oublie pas. Espèce d'égoïste. Vous vouliez juste du temps. Et maintenant, le monde entier a un pied dans son monde. Mille morts s...
+2025-05-15 03:15:57,260 | reddit_video | INFO | Traitement du segment 1/2
+2025-05-15 03:15:57,260 | reddit_video | INFO | Création de la vidéo pour le segment 1
+2025-05-15 03:21:16,005 | reddit_video | INFO | Vidéo 1 créée avec succès: output/video_1kkxpxq_To_whoever_made_that_fr_segment1.mp4
+2025-05-15 03:21:16,005 | reddit_video | INFO | Traitement du segment 2/2
+2025-05-15 03:21:16,006 | reddit_video | INFO | Création de la vidéo pour le segment 2
+2025-05-15 03:22:50,907 | reddit_video | INFO | Vidéo 2 créée avec succès: output/video_1kkxpxq_To_whoever_made_that_fr_segment2.mp4
+2025-05-15 03:22:50,908 | reddit_video | INFO | === RÉSUMÉ DE L'EXÉCUTION ===
+2025-05-15 03:22:50,908 | reddit_video | INFO | Post: 1kkxpxq
+2025-05-15 03:22:50,908 | reddit_video | INFO | Modèle GPT utilisé: gpt-3.5-turbo
+2025-05-15 03:22:50,908 | reddit_video | INFO | Segments traités: 2
+2025-05-15 03:22:50,908 | reddit_video | INFO | Vidéos créées avec succès: 2/2
+2025-05-15 03:22:50,908 | reddit_video | INFO | Dossier de sortie: /Users/ntardy/Dev/r-elFusion/output
+2025-05-15 03:22:50,909 | reddit_video | INFO | Programme terminé avec succès: 2/2 vidéos créées

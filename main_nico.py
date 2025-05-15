@@ -113,9 +113,9 @@ def main():
                 logger.info(f"Traduction du texte avec le modèle {args.gpt_model}")
                 try:
                     translated = translate_text_with_gpt(
-                    cleaned,
-                    client,
-                    args.gpt_model,
+                    text=cleaned,
+                    client=client,
+                    model=args.gpt_model,
                     max_tokens=4096,
                     source_language=source_language,
                     target_language=args.target_language,
@@ -125,6 +125,9 @@ def main():
                     raise TranslationError(f"Erreur lors de la traduction avec GPT: {str(e)}") from e
             else:
                 translated = cleaned
+        else:
+            translated = cleaned
+
         # Découper le texte en morceaux
         logger.info(f"Découpage du texte en segments de {args.chunk_size} mots")
         try:
@@ -147,17 +150,18 @@ def main():
         # Création des vidéos pour chaque segment
         success_count = 0
         failed_segments = []
+        total_segments = len(chunks)
 
         try:
             # Définir les thèmes et mots-clés à exclure
             excluded_themes = ["violence"]
             excluded_keywords = ["violent"]
-            
+
             # Définir les mots-clés à inclure (au moins un doit être présent)
             included_keywords = args.keywords_youtube
             included_themes = args.theme_youtube
 
-            duration = (len(chunks) * 95) / 60 
+            duration = (len(chunks) * 95) / 60
 
             # Télécharger une vidéo par thème avec exclusions et inclusions
             video_path = download_video_by_theme(
@@ -169,7 +173,7 @@ def main():
                 included_keywords=included_keywords  # Mots-clés à inclure (au moins un)
             )
             print(f"Vidéo téléchargée et traitée avec succès: {video_path}")
-            
+
         except VideoDownloadError as e:
             print(f"Erreur lors du téléchargement: {e}")
         except Exception as e:
@@ -180,8 +184,11 @@ def main():
             logger.info(f"Traitement du segment {segment_num}/{len(chunks)}")
 
             # Fichiers temporaires pour ce segment
-            audio_file = os.path.join(args.output_dir, f"audio_{post_id}_{title}_{args.target_language}_{segment_num}.mp3")
-            video_file = os.path.join(args.output_dir, f"video_{post_id}_{title}_{args.target_language}_{segment_num}.mp4")
+            safe_title = ''.join(c if c.isalnum() else '_' for c in title[:20])  # Limiter et sécuriser le titre
+            video_file = os.path.join(
+                args.output_dir,
+                f"video_{post_id}_{safe_title}_segment{segment_num}_{args.target_language}.mp4"
+            )
 
             try:
                 # Déterminer la langue pour la voix
@@ -195,7 +202,10 @@ def main():
                     chunk,
                     video_path,
                     video_file,
-                    voice_language
+                    voice_language,
+                    add_subtitles=True,
+                    segment_index=i,
+                    total_segments=total_segments
                 )
 
                 if success:

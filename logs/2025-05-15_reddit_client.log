@@ -1,0 +1,12 @@
+2025-05-15 03:14:49,567 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 03:14:49,938 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 03:14:49,939 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 03:14:49,939 | reddit_client | INFO | Recherche dans le subreddit: r/creepypasta
+2025-05-15 03:14:51,883 | reddit_client | INFO | Validation du post: "To whoever made that cursed Reddit post: you’ve doomed us all." (Score: 135)
+2025-05-15 03:14:53,823 | reddit_client | INFO | Post validé: "To whoever made that cursed Reddit post: you’ve doomed us all."
+2025-05-15 03:15:50,318 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 03:15:50,319 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 03:15:50,320 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 03:15:50,320 | reddit_client | INFO | Recherche dans le subreddit: r/creepypasta
+2025-05-15 03:15:52,092 | reddit_client | INFO | Validation du post: "To whoever made that cursed Reddit post: you’ve doomed us all." (Score: 129)
+2025-05-15 03:15:53,220 | reddit_client | INFO | Post validé: "To whoever made that cursed Reddit post: you’ve doomed us all."

@@ -162,7 +162,7 @@ def create_subtitles(text, video_width, video_height, video_duration, font_size=
 
     return subtitles
 
-def create_video(audio_file, background_video="fond.mp4", output="output.mp4", text=None):
+def create_video(audio_file, background_video="video.mp4", output="output.mp4", text=None, segment_index=0, total_segments=1):
     """
     Crée une vidéo en combinant un fichier audio avec une vidéo de fond et des sous-titres optionnels
 
@@ -171,6 +171,8 @@ def create_video(audio_file, background_video="fond.mp4", output="output.mp4", t
         background_video: Chemin vers la vidéo de fond
         output: Chemin du fichier de sortie
         text: Texte pour les sous-titres (optionnel)
+        segment_index: Index du segment actuel (utilisé pour choisir la partie de la vidéo)
+        total_segments: Nombre total de segments (utilisé pour calculer la partie de la vidéo)
 
     Returns:
         bool: True si la création a réussi, False sinon
@@ -179,6 +181,7 @@ def create_video(audio_file, background_video="fond.mp4", output="output.mp4", t
         VideoError: En cas d'erreur lors de la création de la vidéo
     """
     logger.info(f"Création d'une vidéo avec l'audio '{audio_file}' et la vidéo de fond '{background_video}'")
+    logger.info(f"Segment {segment_index + 1}/{total_segments}")
 
     if text:
         logger.info("Des sous-titres seront ajoutés à la vidéo")
@@ -197,8 +200,8 @@ def create_video(audio_file, background_video="fond.mp4", output="output.mp4", t
 
         # Charger la vidéo de fond
         try:
-            video_clip = VideoFileClip(background_video)
-            logger.debug(f"Vidéo de fond chargée: {background_video} ({video_clip.duration:.1f}s)")
+            full_video_clip = VideoFileClip(background_video)
+            logger.debug(f"Vidéo de fond chargée: {background_video} ({full_video_clip.duration:.1f}s)")
         except Exception as e:
             raise VideoError(f"Impossible de charger la vidéo de fond: {str(e)}", background_video) from e
 
@@ -206,31 +209,52 @@ def create_video(audio_file, background_video="fond.mp4", output="output.mp4", t
         try:
             audio_clip = AudioFileClip(audio_file)
             audio_duration = audio_clip.duration
+            # Ajouter 1.5 secondes à la durée du segment vidéo
+            segment_duration = audio_duration + 1.5
             logger.debug(f"Audio chargé: {audio_file} ({audio_duration:.1f}s)")
         except Exception as e:
             raise VideoError(f"Impossible de charger l'audio: {str(e)}", audio_file) from e
 
-        # Si la vidéo est trop courte, on la boucle
-        if video_clip.duration < audio_duration:
-            logger.warning(f"La vidéo de fond ({video_clip.duration:.1f}s) est plus courte que l'audio ({audio_duration:.1f}s)")
-            logger.info("Bouclage de la vidéo pour correspondre à la durée de l'audio...")
+        # Vérifier si la vidéo est suffisamment longue pour tous les segments
+        total_duration_needed = segment_duration * total_segments
+
+        if full_video_clip.duration < total_duration_needed:
+            logger.warning(f"La vidéo de fond ({full_video_clip.duration:.1f}s) est plus courte que nécessaire ({total_duration_needed:.1f}s)")
+            logger.info("Bouclage de la vidéo pour obtenir une durée suffisante...")
 
             # Calculer combien de fois nous devons répéter la vidéo
-            repeat_count = math.ceil(audio_duration / video_clip.duration)
-            extended_clip = video_clip
+            repeat_count = math.ceil(total_duration_needed / full_video_clip.duration)
+            extended_clip = full_video_clip
 
             for i in range(repeat_count - 1):
                 logger.debug(f"Ajout de la boucle {i+1}/{repeat_count-1}")
-                extended_clip = extended_clip.append_clip(video_clip)
+                extended_clip = extended_clip.append_clip(full_video_clip)
 
-            video_clip = extended_clip
-            logger.info(f"Vidéo bouclée créée avec succès (nouvelle durée: {video_clip.duration:.1f}s)")
+            full_video_clip = extended_clip
+            logger.info(f"Vidéo bouclée créée avec succès (nouvelle durée: {full_video_clip.duration:.1f}s)")
 
-        # Découper la vidéo à la longueur de l'audio
-        video_clip = video_clip.subclipped(0, audio_duration)
-        logger.debug(f"Vidéo découpée à {audio_duration:.1f}s")
+        # Extraire le segment vidéo correspondant à ce segment audio
+        start_time = segment_index * segment_duration
+        end_time = start_time + segment_duration
+
+        # S'assurer que end_time ne dépasse pas la durée de la vidéo
+        end_time = min(end_time, full_video_clip.duration)
+
+        # Extraire le segment de vidéo correspondant
+        video_clip = full_video_clip.subclipped(start_time, end_time)
+        logger.debug(f"Segment vidéo extrait: {start_time:.1f}s à {end_time:.1f}s (durée: {video_clip.duration:.1f}s)")
+
+        # Ajuster la durée du clip vidéo si nécessaire
+        if video_clip.duration < segment_duration:
+            logger.warning(f"Le segment vidéo est plus court que nécessaire ({video_clip.duration:.1f}s < {segment_duration:.1f}s)")
+            # On garde la durée actuelle
 
         # Assembler l'audio et la vidéo
+        # Assurons-nous que l'audio n'est pas plus long que la vidéo
+        if audio_duration > video_clip.duration:
+            audio_clip = audio_clip.subclipped(0, video_clip.duration)
+            logger.debug(f"Audio ajusté à la durée de la vidéo: {video_clip.duration:.1f}s")
+
         video_with_audio = video_clip.with_audio(audio_clip)
         logger.debug("Audio et vidéo assemblés avec succès")
 
@@ -290,6 +314,8 @@ def create_video(audio_file, background_video="fond.mp4", output="output.mp4", t
         try:
             if video_clip:
                 video_clip.close()
+            if full_video_clip:
+                full_video_clip.close()
             if audio_clip:
                 audio_clip.close()
             if final_clip:
@@ -297,7 +323,7 @@ def create_video(audio_file, background_video="fond.mp4", output="output.mp4", t
         except Exception as e:
             logger.warning(f"Erreur lors du nettoyage des ressources: {e}")
 
-def process_video_from_text(text, background_video="fond.mp4", output="output.mp4", lang='fr', add_subtitles=True):
+def process_video_from_text(text, background_video="video.mp4", output="output.mp4", lang='fr', add_subtitles=True, segment_index=0, total_segments=1):
     """
     Fonction de haut niveau qui traite du texte en une vidéo complète avec sous-titres optionnels
 
@@ -307,16 +333,19 @@ def process_video_from_text(text, background_video="fond.mp4", output="output.mp
         output: Fichier vidéo de sortie
         lang: Langue pour la synthèse vocale
         add_subtitles: Ajouter des sous-titres à la vidéo
+        segment_index: Index du segment actuel
+        total_segments: Nombre total de segments
 
     Returns:
         bool: True si le traitement a réussi, False sinon
     """
     logger.info(f"Démarrage du traitement vidéo à partir du texte ({len(text)} caractères)")
+    logger.info(f"Segment {segment_index + 1}/{total_segments}")
     logger.info(f"Sous-titres: {'Activés' if add_subtitles else 'Désactivés'}")
 
     try:
         # Créer un fichier audio temporaire
-        temp_audio = "temp_voice.mp3"
+        temp_audio = f"temp_voice_{segment_index}.mp3"
 
         # Convertir le texte en audio
         audio_file = text_to_speech(text, temp_audio, lang)
@@ -328,7 +357,9 @@ def process_video_from_text(text, background_video="fond.mp4", output="output.mp
             audio_file,
             background_video,
             output,
-            text=text if add_subtitles else None
+            text=text if add_subtitles else None,
+            segment_index=segment_index,
+            total_segments=total_segments
         )
 
         # Supprimer le fichier audio temporaire
