@@ -8,7 +8,7 @@ from reddit_client import setup_reddit, get_reddit_content
 from text_processor import clean_reddit_text, split_text_into_chunks, setup_nltk
 from translator import translate_text_with_gpt, detect_language
 from media_generator import process_video_from_text
-from youtube_downloader import download_video_by_theme
+from youtube_dl import download_video_by_theme
 
 # Import des modules de gestion d'erreurs
 from handle_log_exception.logger import setup_logger, default_logger as logger
@@ -153,24 +153,14 @@ def main():
         total_segments = len(chunks)
 
         try:
-            # Définir les thèmes et mots-clés à exclure
-            excluded_themes = ["violence"]
-            excluded_keywords = ["violent"]
-
-            # Définir les mots-clés à inclure (au moins un doit être présent)
-            included_keywords = args.keywords_youtube
-            included_themes = args.theme_youtube
-
             duration = (len(chunks) * 95)
-
             # Télécharger une vidéo par thème avec exclusions et inclusions
+            theme = args.theme_playlist  # Choisir un thème parmi les disponibles
             video_path = download_video_by_theme(
-                theme=included_themes,          # Thème de recherche
-                duration_range=(duration, duration * 2),        # Durée souhaitée entre 15 et 30 secondes
-                output_path="outputs/video_yt.mp4",
-                excluded_themes=excluded_themes,    # Thèmes à exclure
-                excluded_keywords=excluded_keywords,  # Mots-clés à exclure des métadonnées
-                included_keywords=included_keywords  # Mots-clés à inclure (au moins un)
+                theme=theme,
+                duration_range=(duration, duration * 2),  # Entre 1 et 3 minutes
+                output_path=f"outputs/video_{theme}.mp4",
+                random_selection=True  # Sélection aléatoire parmi les vidéos compatibles
             )
             print(f"Vidéo téléchargée et traitée avec succès: {video_path}")
 
