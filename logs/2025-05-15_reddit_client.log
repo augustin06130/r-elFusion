@@ -10,3 +10,101 @@
 2025-05-15 03:15:50,320 | reddit_client | INFO | Recherche dans le subreddit: r/creepypasta
 2025-05-15 03:15:52,092 | reddit_client | INFO | Validation du post: "To whoever made that cursed Reddit post: you’ve doomed us all." (Score: 129)
 2025-05-15 03:15:53,220 | reddit_client | INFO | Post validé: "To whoever made that cursed Reddit post: you’ve doomed us all."
+2025-05-15 18:07:23,196 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 18:07:23,447 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 18:07:23,448 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 18:07:23,448 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:07:24,451 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 18:07:24,452 | reddit_client | INFO | Tentative 2/5 de recherche de contenu
+2025-05-15 18:07:24,452 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:07:24,947 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 18:07:24,948 | reddit_client | INFO | Tentative 3/5 de recherche de contenu
+2025-05-15 18:07:24,948 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:07:25,467 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 18:07:25,468 | reddit_client | INFO | Tentative 4/5 de recherche de contenu
+2025-05-15 18:07:25,468 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:07:25,888 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 18:07:25,889 | reddit_client | INFO | Tentative 5/5 de recherche de contenu
+2025-05-15 18:07:25,889 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:07:26,400 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 18:07:26,401 | reddit_client | ERROR | Aucun contenu valide trouvé après 5 tentatives
+2025-05-15 18:07:34,169 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 18:07:34,170 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 18:07:34,171 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 18:07:34,171 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:07:35,078 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 18:07:35,079 | reddit_client | INFO | Tentative 2/5 de recherche de contenu
+2025-05-15 18:07:35,079 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:07:35,614 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 18:07:35,615 | reddit_client | INFO | Tentative 3/5 de recherche de contenu
+2025-05-15 18:07:35,616 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:07:36,072 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 18:07:36,073 | reddit_client | INFO | Tentative 4/5 de recherche de contenu
+2025-05-15 18:07:36,073 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:07:36,578 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 18:07:36,579 | reddit_client | INFO | Tentative 5/5 de recherche de contenu
+2025-05-15 18:07:36,579 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:07:37,042 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 18:07:37,042 | reddit_client | ERROR | Aucun contenu valide trouvé après 5 tentatives
+2025-05-15 18:08:07,957 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 18:08:07,958 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 18:08:07,958 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 18:08:07,958 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:08:09,578 | reddit_client | INFO | Validation du post: "helpful "Should I post my story?" flow chart" (Score: 2715)
+2025-05-15 18:08:12,261 | reddit_client | INFO | Post rejeté: , ce texte ne semble pas être une histoire narrative ou un article intéressant à publier sur TikTok. Il s'agit davantage d'une liste de subreddit et de conseils pour savoir si un contenu est conforme aux règles, ce qui n'est pas un contenu divertissant pour TikTok.
+2025-05-15 18:08:12,261 | reddit_client | INFO | Validation du post: "Opened the door to my husband who didn’t move or say anything" (Score: 1167)
+2025-05-15 18:08:13,171 | reddit_client | INFO | Post validé: "Opened the door to my husband who didn’t move or say anything"
+2025-05-15 18:12:59,664 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 18:12:59,665 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 18:12:59,666 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 18:12:59,666 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:13:01,195 | reddit_client | INFO | Validation du post: "helpful "Should I post my story?" flow chart" (Score: 2717)
+2025-05-15 18:13:02,574 | reddit_client | INFO | Post rejeté: . Il s'agit d'une liste de subreddits et d'informations sur des règles, ce n'est pas une histoire narrative ou un article intéressant pour TikTok.
+2025-05-15 18:13:02,574 | reddit_client | INFO | Validation du post: "Opened the door to my husband who didn’t move or say anything" (Score: 1158)
+2025-05-15 18:13:03,167 | reddit_client | INFO | Post validé: "Opened the door to my husband who didn’t move or say anything"
+2025-05-15 18:17:18,582 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 18:17:18,583 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 18:17:18,583 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 18:17:18,583 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:17:20,098 | reddit_client | INFO | Validation du post: "helpful "Should I post my story?" flow chart" (Score: 2718)
+2025-05-15 18:17:21,844 | reddit_client | INFO | Post rejeté: . Ce texte n'est pas une histoire narrative ou un article intéressant. Il s'agit davantage d'une liste de subreddits et d'instructions pour poster du contenu sur des thèmes spécifiques, ce qui le rend moins adapté à une publication sur TikTok.
+2025-05-15 18:17:21,845 | reddit_client | INFO | Validation du post: "Opened the door to my husband who didn’t move or say anything" (Score: 1163)
+2025-05-15 18:17:22,446 | reddit_client | INFO | Post validé: "Opened the door to my husband who didn’t move or say anything"
+2025-05-15 18:36:41,999 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 18:36:42,001 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 18:36:42,001 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 18:36:42,001 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 18:36:43,450 | reddit_client | INFO | Validation du post: "helpful "Should I post my story?" flow chart" (Score: 2721)
+2025-05-15 18:36:45,532 | reddit_client | INFO | Post rejeté: , ce texte n'est pas une histoire narrative ou un article intéressant. Il s'agit simplement d'une liste de sous-domaines Reddit liés à différents sujets sans contenu narratif significatif.
+2025-05-15 18:36:45,532 | reddit_client | INFO | Validation du post: "Opened the door to my husband who didn’t move or say anything" (Score: 1163)
+2025-05-15 18:36:46,338 | reddit_client | INFO | Post rejeté: . Ce texte semble être une anecdote personnelle plutôt qu'un article intéressant pour être publié sur TikTok.
+2025-05-15 18:36:46,338 | reddit_client | INFO | Validation du post: "Moderation Policy 101" (Score: 791)
+2025-05-15 18:36:47,992 | reddit_client | INFO | Post rejeté: , car il s'agit d'un ensemble de règles et de consignes pour un subreddit spécifique plutôt que d'une histoire narrative ou d'un article intéressant pour TikTok.
+2025-05-15 18:36:47,992 | reddit_client | INFO | Validation du post: "Strange experience with the moon tonight" (Score: 446)
+2025-05-15 18:36:48,899 | reddit_client | INFO | Post validé: "Strange experience with the moon tonight"
+2025-05-15 19:01:53,332 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 19:01:53,333 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 19:01:53,333 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 19:01:53,333 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 19:01:54,756 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 19:01:54,756 | reddit_client | INFO | Tentative 2/5 de recherche de contenu
+2025-05-15 19:01:54,757 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 19:01:55,426 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 19:01:55,427 | reddit_client | INFO | Tentative 3/5 de recherche de contenu
+2025-05-15 19:01:55,427 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 19:01:55,913 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 19:01:55,914 | reddit_client | INFO | Tentative 4/5 de recherche de contenu
+2025-05-15 19:01:55,914 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 19:01:56,363 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 19:01:56,364 | reddit_client | INFO | Tentative 5/5 de recherche de contenu
+2025-05-15 19:01:56,364 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 19:01:56,800 | reddit_client | ERROR | Erreur lors de la recherche: received 403 HTTP response
+2025-05-15 19:01:56,801 | reddit_client | ERROR | Aucun contenu valide trouvé après 5 tentatives
+2025-05-15 19:02:46,376 | reddit_client | INFO | Tentative de connexion à l'API Reddit
+2025-05-15 19:02:46,377 | reddit_client | INFO | Connexion à Reddit réussie
+2025-05-15 19:02:46,377 | reddit_client | INFO | Tentative 1/5 de recherche de contenu
+2025-05-15 19:02:46,377 | reddit_client | INFO | Recherche dans le subreddit: r/Glitch_in_the_Matrix
+2025-05-15 19:02:48,359 | reddit_client | INFO | Validation du post: "helpful "Should I post my story?" flow chart" (Score: 2717)
+2025-05-15 19:02:50,415 | reddit_client | INFO | Post rejeté: . Ce texte est une liste de subreddits et d'instructions, il ne s'agit pas d'une histoire narrative ou d'un article intéressant pour TikTok.
+2025-05-15 19:02:50,415 | reddit_client | INFO | Validation du post: "Opened the door to my husband who didn’t move or say anything" (Score: 1164)
+2025-05-15 19:02:51,326 | reddit_client | INFO | Post validé: "Opened the door to my husband who didn’t move or say anything"

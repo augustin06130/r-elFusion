@@ -44,3 +44,113 @@
 2025-05-15 03:21:23,239 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
 2025-05-15 03:21:23,239 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kkxpxq_To_whoever_made_that_fr_segment2.mp4...
 2025-05-15 03:22:50,875 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kkxpxq_To_whoever_made_that_fr_segment2.mp4 (16.3 MB)
+2025-05-15 18:15:00,459 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1019 caractères)
+2025-05-15 18:15:00,459 | audio_video_processor | INFO | Segment 1/2
+2025-05-15 18:15:00,459 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 18:15:00,459 | audio_video_processor | INFO | Conversion du texte en audio (1019 caractères)
+2025-05-15 18:15:14,029 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_0.mp3 (497.4 KB)
+2025-05-15 18:15:14,029 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_0.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 18:15:14,029 | audio_video_processor | INFO | Segment 1/2
+2025-05-15 18:15:14,030 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 18:15:14,275 | audio_video_processor | WARNING | La vidéo de fond (6.3s) est plus courte que nécessaire (130.3s)
+2025-05-15 18:15:14,275 | audio_video_processor | INFO | Bouclage de la vidéo pour obtenir une durée suffisante...
+2025-05-15 18:15:14,275 | audio_video_processor | ERROR | Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip'
+2025-05-15 18:15:14,307 | audio_video_processor | ERROR | Erreur lors du traitement vidéo: Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip': output/video_1kfjrml_Opened_the_door_to_m_segment1_fr.mp4
+2025-05-15 18:15:14,308 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (683 caractères)
+2025-05-15 18:15:14,308 | audio_video_processor | INFO | Segment 2/2
+2025-05-15 18:15:14,308 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 18:15:14,308 | audio_video_processor | INFO | Conversion du texte en audio (683 caractères)
+2025-05-15 18:15:23,981 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_1.mp3 (328.3 KB)
+2025-05-15 18:15:23,982 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_1.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 18:15:23,982 | audio_video_processor | INFO | Segment 2/2
+2025-05-15 18:15:23,982 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 18:15:24,209 | audio_video_processor | WARNING | La vidéo de fond (6.3s) est plus courte que nécessaire (87.0s)
+2025-05-15 18:15:24,210 | audio_video_processor | INFO | Bouclage de la vidéo pour obtenir une durée suffisante...
+2025-05-15 18:15:24,210 | audio_video_processor | ERROR | Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip'
+2025-05-15 18:15:24,239 | audio_video_processor | ERROR | Erreur lors du traitement vidéo: Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip': output/video_1kfjrml_Opened_the_door_to_m_segment2_fr.mp4
+2025-05-15 18:19:09,538 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1019 caractères)
+2025-05-15 18:19:09,538 | audio_video_processor | INFO | Segment 1/2
+2025-05-15 18:19:09,538 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 18:19:09,538 | audio_video_processor | INFO | Conversion du texte en audio (1019 caractères)
+2025-05-15 18:19:21,036 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_0.mp3 (497.4 KB)
+2025-05-15 18:19:21,037 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_0.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 18:19:21,037 | audio_video_processor | INFO | Segment 1/2
+2025-05-15 18:19:21,037 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 18:19:21,288 | audio_video_processor | WARNING | La vidéo de fond (6.3s) est plus courte que nécessaire (130.3s)
+2025-05-15 18:19:21,288 | audio_video_processor | INFO | Bouclage de la vidéo pour obtenir une durée suffisante...
+2025-05-15 18:19:21,288 | audio_video_processor | ERROR | Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip'
+2025-05-15 18:19:21,316 | audio_video_processor | ERROR | Erreur lors du traitement vidéo: Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip': output/video_1kfjrml_Opened_the_door_to_m_segment1_fr.mp4
+2025-05-15 18:19:21,317 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (490 caractères)
+2025-05-15 18:19:21,317 | audio_video_processor | INFO | Segment 2/2
+2025-05-15 18:19:21,317 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 18:19:21,317 | audio_video_processor | INFO | Conversion du texte en audio (490 caractères)
+2025-05-15 18:19:29,603 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_1.mp3 (234.6 KB)
+2025-05-15 18:19:29,603 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_1.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 18:19:29,604 | audio_video_processor | INFO | Segment 2/2
+2025-05-15 18:19:29,604 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 18:19:29,847 | audio_video_processor | WARNING | La vidéo de fond (6.3s) est plus courte que nécessaire (63.0s)
+2025-05-15 18:19:29,847 | audio_video_processor | INFO | Bouclage de la vidéo pour obtenir une durée suffisante...
+2025-05-15 18:19:29,847 | audio_video_processor | ERROR | Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip'
+2025-05-15 18:19:29,875 | audio_video_processor | ERROR | Erreur lors du traitement vidéo: Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip': output/video_1kfjrml_Opened_the_door_to_m_segment2_fr.mp4
+2025-05-15 18:38:43,083 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1032 caractères)
+2025-05-15 18:38:43,083 | audio_video_processor | INFO | Segment 1/3
+2025-05-15 18:38:43,083 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 18:38:43,083 | audio_video_processor | INFO | Conversion du texte en audio (1032 caractères)
+2025-05-15 18:38:55,740 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_0.mp3 (505.9 KB)
+2025-05-15 18:38:55,740 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_0.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 18:38:55,740 | audio_video_processor | INFO | Segment 1/3
+2025-05-15 18:38:55,740 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 18:38:56,002 | audio_video_processor | WARNING | La vidéo de fond (9.5s) est plus courte que nécessaire (198.8s)
+2025-05-15 18:38:56,002 | audio_video_processor | INFO | Bouclage de la vidéo pour obtenir une durée suffisante...
+2025-05-15 18:38:56,002 | audio_video_processor | ERROR | Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip'
+2025-05-15 18:38:56,028 | audio_video_processor | ERROR | Erreur lors du traitement vidéo: Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip': output/video_1kcq07j_Strange_experience_w_segment1_fr.mp4
+2025-05-15 18:38:56,028 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1119 caractères)
+2025-05-15 18:38:56,028 | audio_video_processor | INFO | Segment 2/3
+2025-05-15 18:38:56,029 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 18:38:56,029 | audio_video_processor | INFO | Conversion du texte en audio (1119 caractères)
+2025-05-15 18:39:09,481 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_1.mp3 (538.5 KB)
+2025-05-15 18:39:09,482 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_1.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 18:39:09,483 | audio_video_processor | INFO | Segment 2/3
+2025-05-15 18:39:09,483 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 18:39:09,720 | audio_video_processor | WARNING | La vidéo de fond (9.5s) est plus courte que nécessaire (211.3s)
+2025-05-15 18:39:09,720 | audio_video_processor | INFO | Bouclage de la vidéo pour obtenir une durée suffisante...
+2025-05-15 18:39:09,720 | audio_video_processor | ERROR | Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip'
+2025-05-15 18:39:09,747 | audio_video_processor | ERROR | Erreur lors du traitement vidéo: Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip': output/video_1kcq07j_Strange_experience_w_segment2_fr.mp4
+2025-05-15 18:39:09,747 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (53 caractères)
+2025-05-15 18:39:09,747 | audio_video_processor | INFO | Segment 3/3
+2025-05-15 18:39:09,747 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 18:39:09,747 | audio_video_processor | INFO | Conversion du texte en audio (53 caractères)
+2025-05-15 18:39:10,227 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_2.mp3 (29.4 KB)
+2025-05-15 18:39:10,228 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_2.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 18:39:10,228 | audio_video_processor | INFO | Segment 3/3
+2025-05-15 18:39:10,228 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 18:39:10,475 | audio_video_processor | WARNING | La vidéo de fond (9.5s) est plus courte que nécessaire (15.8s)
+2025-05-15 18:39:10,476 | audio_video_processor | INFO | Bouclage de la vidéo pour obtenir une durée suffisante...
+2025-05-15 18:39:10,476 | audio_video_processor | ERROR | Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip'
+2025-05-15 18:39:10,500 | audio_video_processor | ERROR | Erreur lors du traitement vidéo: Erreur lors de la création de la vidéo: 'VideoFileClip' object has no attribute 'append_clip': output/video_1kcq07j_Strange_experience_w_segment3_fr.mp4
+2025-05-15 19:05:42,594 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (1030 caractères)
+2025-05-15 19:05:42,594 | audio_video_processor | INFO | Segment 1/2
+2025-05-15 19:05:42,594 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 19:05:42,594 | audio_video_processor | INFO | Conversion du texte en audio (1030 caractères)
+2025-05-15 19:05:56,479 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_0.mp3 (508.7 KB)
+2025-05-15 19:05:56,479 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_0.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 19:05:56,479 | audio_video_processor | INFO | Segment 1/2
+2025-05-15 19:05:56,479 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 19:05:56,729 | audio_video_processor | INFO | Création des sous-titres pour le texte (1030 caractères)
+2025-05-15 19:05:57,106 | audio_video_processor | INFO | 48 clips de sous-titres créés avec succès
+2025-05-15 19:05:57,124 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-15 19:05:57,124 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kfjrml_Opened_the_door_to_m_segment1_fr.mp4...
+2025-05-15 19:06:45,430 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kfjrml_Opened_the_door_to_m_segment1_fr.mp4 (8.4 MB)
+2025-05-15 19:06:45,462 | audio_video_processor | INFO | Démarrage du traitement vidéo à partir du texte (694 caractères)
+2025-05-15 19:06:45,462 | audio_video_processor | INFO | Segment 2/2
+2025-05-15 19:06:45,462 | audio_video_processor | INFO | Sous-titres: Activés
+2025-05-15 19:06:45,462 | audio_video_processor | INFO | Conversion du texte en audio (694 caractères)
+2025-05-15 19:06:55,703 | audio_video_processor | INFO | Fichier audio créé avec succès: temp_voice_1.mp3 (339.6 KB)
+2025-05-15 19:06:55,703 | audio_video_processor | INFO | Création d'une vidéo avec l'audio 'temp_voice_1.mp3' et la vidéo de fond 'outputs/video_yt_processed.mp4'
+2025-05-15 19:06:55,703 | audio_video_processor | INFO | Segment 2/2
+2025-05-15 19:06:55,703 | audio_video_processor | INFO | Des sous-titres seront ajoutés à la vidéo
+2025-05-15 19:06:56,117 | audio_video_processor | INFO | Création des sous-titres pour le texte (694 caractères)
+2025-05-15 19:06:56,395 | audio_video_processor | INFO | 33 clips de sous-titres créés avec succès
+2025-05-15 19:06:56,414 | audio_video_processor | INFO | Sous-titres ajoutés avec succès
+2025-05-15 19:06:56,414 | audio_video_processor | INFO | Rendu de la vidéo finale vers output/video_1kfjrml_Opened_the_door_to_m_segment2_fr.mp4...
+2025-05-15 19:07:28,181 | audio_video_processor | INFO | Vidéo créée avec succès: output/video_1kfjrml_Opened_the_door_to_m_segment2_fr.mp4 (4.8 MB)

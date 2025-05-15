@@ -161,7 +161,7 @@ def main():
             included_keywords = args.keywords_youtube
             included_themes = args.theme_youtube
 
-            duration = (len(chunks) * 95) / 60
+            duration = (len(chunks) * 95)
 
             # Télécharger une vidéo par thème avec exclusions et inclusions
             video_path = download_video_by_theme(
