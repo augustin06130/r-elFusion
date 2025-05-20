@@ -18,8 +18,8 @@ logging.basicConfig(
 # Dictionnaire des playlists thématiques
 PLAYLIST_THEMES = {
     # Jeux vidéo
-    "minecraft": "https://www.youtube.com/playlist?list=PLmSs-0cFIbfVWhkZx0i4UMiZdr2C0Z8w7",
-    "gta5": "https://www.youtube.com/playlist?list=PL_DlRKsGTUKKL3zbR6d-rGA39pLSFwtYR",
+    "minecraft": "https://www.youtube.com/playlist?list=PLmSs-0cFIbfVWhkZx0i4UMiZdr2C0Z8w7", # playlist valide
+    "gta5": "https://www.youtube.com/playlist?list=PLcpME8j-OMRw5fA_Kkw0-Fo7Gi_7Hstsi", # playlist valide
     "fortnite": "https://www.youtube.com/playlist?list=PL4vrFQwPcb12ticENMiILZoMOC_5fOQxM",
     "valorant": "https://www.youtube.com/playlist?list=PLQwKnV26UMYT78ZOkx8LBGBgm9-x8_l9c",
     "apex": "https://www.youtube.com/playlist?list=PLjT74Nm0e7lfO9skUG9GXMQZPoAZ1p_bj",
