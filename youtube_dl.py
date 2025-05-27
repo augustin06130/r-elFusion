@@ -60,15 +60,19 @@ def get_playlist_url_by_theme(theme):
     Returns:
         str: URL de la playlist correspondante
     """
-    # Convertir le thème en minuscules pour éviter les problèmes de casse
-    theme = theme.lower().strip()
-    
-    # Vérifier si le thème existe dans le dictionnaire
-    if theme in PLAYLIST_THEMES:
-        logging.info(f"Thème trouvé: {theme}")
-        return PLAYLIST_THEMES[theme]
-    else:
-        logging.warning(f"Thème non trouvé: {theme}, utilisation du thème général")
+    try:
+        # Convertir le thème en minuscules pour éviter les problèmes de casse
+        theme = theme.lower().strip()
+        
+        # Vérifier si le thème existe dans le dictionnaire
+        if theme in PLAYLIST_THEMES:
+            logging.info(f"Thème trouvé: {theme}")
+            return PLAYLIST_THEMES[theme]
+        else:
+            logging.warning(f"Thème non trouvé: {theme}, utilisation du thème général")
+            return PLAYLIST_THEMES["general"]
+    except Exception as e:
+        logging.error(f"Erreur lors de la récupération du thème: {str(e)}")
         return PLAYLIST_THEMES["general"]
 
 def get_videos_from_playlist(playlist_url, max_results=None):
@@ -90,8 +94,6 @@ def get_videos_from_playlist(playlist_url, max_results=None):
             'ignoreerrors': True,
             'no_warnings': True,
             'skip_download': True,
-            'format': 'best',
-            'cookiesfrombrowser': ('chrome',),
         }
 
         if max_results:
@@ -135,11 +137,9 @@ def get_video_info(url):
     try:
         ydl_opts = {
             'quiet': True,
-            'format': 'best',
             'skip_download': True,
             'no_warnings': True,
             'ignoreerrors': True,
-            'cookiesfrombrowser': ('chrome',),
         }
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -204,19 +204,24 @@ def download_video_by_theme(theme, duration_range=(10, 30), output_path="outputs
     Raises:
         VideoDownloadError: Si une erreur survient pendant le téléchargement
     """
-    # Récupérer l'URL de la playlist correspondant au thème
-    playlist_url = get_playlist_url_by_theme(theme)
-    
-    logging.info(f"Téléchargement vidéo pour le thème: {theme} - Playlist: {playlist_url}")
-    
-    # Utiliser la fonction existante pour télécharger depuis la playlist
-    return download_video_from_playlist(
-        playlist_url=playlist_url,
-        duration_range=duration_range,
-        output_path=output_path,
-        random_selection=random_selection,
-        max_videos_to_check=max_videos_to_check
-    )
+    try:
+        # Récupérer l'URL de la playlist correspondant au thème
+        playlist_url = get_playlist_url_by_theme(theme)
+        
+        logging.info(f"Téléchargement vidéo pour le thème: {theme} - Playlist: {playlist_url}")
+        
+        # Utiliser la fonction existante pour télécharger depuis la playlist
+        return download_video_from_playlist(
+            playlist_url=playlist_url,
+            duration_range=duration_range,
+            output_path=output_path,
+            random_selection=random_selection,
+            max_videos_to_check=max_videos_to_check
+        )
+    except Exception as e:
+        error_msg = f"Erreur lors du téléchargement par thème: {str(e)}"
+        logging.error(error_msg)
+        raise VideoDownloadError(error_msg) from e
 
 def download_video_from_playlist(playlist_url=None, duration_range=(10, 30), output_path="outputs/video_yt.mp4", random_selection=True, max_videos_to_check=50):
     """
@@ -268,19 +273,20 @@ def download_video_from_playlist(playlist_url=None, duration_range=(10, 30), out
             url, duration, title = suitable_videos[0]
             logging.info(f"Première vidéo compatible sélectionnée: {title} - {url} ({duration}s)")
 
-        # Télécharger la vidéo
+        # Télécharger la vidéo avec des options plus flexibles
         logging.info(f"Téléchargement de la vidéo: {title} - {url}")
 
-        # Options de téléchargement
+        # Options de téléchargement améliorées
         ydl_opts = {
-            'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+            'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best', 
             'merge_output_format': 'mp4',
             'outtmpl': output_path,
             'quiet': True,
             'no_warnings': True,
             'ignoreerrors': True,
             'noplaylist': True,
-            'cookiesfrombrowser': ('chrome',),
+            'no-cache-dir': True,  # Désactiver le cache pour éviter les problèmes de fichiers corrompus
+            'cookiesfrombrowser': ('chrome',), # Pour les coockies, si nécessaire
         }
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -299,6 +305,9 @@ def download_video_from_playlist(playlist_url=None, duration_range=(10, 30), out
     except VideoDownloadError:
         # Relancer les erreurs spécifiques
         raise
+    except KeyboardInterrupt:
+        logging.info("Téléchargement interrompu par l'utilisateur")
+        raise VideoDownloadError("Téléchargement interrompu par l'utilisateur")
     except Exception as e:
         error_msg = f"Erreur lors du téléchargement de la vidéo: {str(e)}"
         logging.error(error_msg)
@@ -338,16 +347,17 @@ def download_video_by_url(url, duration_range=(10, 30), output_path="outputs/vid
             logging.warning(f"La vidéo est trop courte: {video_duration}s < {min_duration}s")
             # On continue quand même mais on informe l'utilisateur
 
-        # Options de téléchargement
+        # Options de téléchargement améliorées
         ydl_opts = {
-            'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+            'format': 'best[height<=720]/best',  # Format plus flexible
             'merge_output_format': 'mp4',
             'outtmpl': output_path,
-            'quiet': True,
-            'no_warnings': True,
-            'ignoreerrors': True,
+            'quiet': False,
+            'no_warnings': False,
+            'ignoreerrors': False,
             'noplaylist': True,
-            'cookiesfrombrowser': ('chrome',),
+            'retries': 3,
+            'fragment_retries': 3,
         }
 
         logging.info(f"Téléchargement de la vidéo: {video_title} - {url} ({video_duration}s)")
@@ -364,6 +374,9 @@ def download_video_by_url(url, duration_range=(10, 30), output_path="outputs/vid
 
         return final_video_path
 
+    except KeyboardInterrupt:
+        logging.info("Téléchargement interrompu par l'utilisateur")
+        raise VideoDownloadError("Téléchargement interrompu par l'utilisateur")
     except Exception as e:
         error_msg = f"Erreur lors du téléchargement de la vidéo: {str(e)}"
         logging.error(error_msg)
@@ -440,69 +453,75 @@ def crop_to_9_16(input_path=None, output_path=None, clip=None):
     Returns:
         VideoFileClip ou str: VideoFileClip recadrée ou chemin de la vidéo recadrée
     """
-    # Si un clip est fourni, l'utiliser directement
-    if clip is None and input_path is not None:
-        clip = VideoFileClip(input_path)
-        close_clip = True  # Fermer le clip à la fin si nous l'avons créé ici
-    elif clip is None:
-        raise ValueError("Vous devez fournir soit un chemin d'entrée, soit un clip")
-    else:
-        close_clip = False  # Ne pas fermer le clip s'il a été fourni par l'appelant
+    try:
+        # Si un clip est fourni, l'utiliser directement
+        if clip is None and input_path is not None:
+            clip = VideoFileClip(input_path)
+            close_clip = True  # Fermer le clip à la fin si nous l'avons créé ici
+        elif clip is None:
+            raise ValueError("Vous devez fournir soit un chemin d'entrée, soit un clip")
+        else:
+            close_clip = False  # Ne pas fermer le clip s'il a été fourni par l'appelant
 
-    # Dimensions originales
-    original_width, original_height = clip.size
-    target_ratio = 9 / 16
+        # Dimensions originales
+        original_width, original_height = clip.size
+        target_ratio = 9 / 16
 
-    # Calcul plus précis du ratio actuel
-    current_ratio = original_width / original_height
+        # Calcul plus précis du ratio actuel
+        current_ratio = original_width / original_height
 
-    # Tolérance pour éviter un recadrage inutile si le ratio est déjà proche de 9:16
-    if abs(current_ratio - target_ratio) < 0.01:
-        # Déjà en 9:16 (ou très proche)
-        cropped_clip = clip
-    elif current_ratio > target_ratio:
-        # Trop large → crop horizontal (centrer sur la largeur)
-        new_width = int(original_height * target_ratio)
-        x_center = original_width // 2
-        x1 = max(0, x_center - new_width // 2)
-        x2 = min(original_width, x_center + new_width // 2 + (new_width % 2))  # Assurer une largeur exacte
-        cropped_clip = clip.cropped(x1=x1, y1=0, x2=x2, y2=original_height)
-    else:
-        # Trop haut → crop vertical (centrer sur la hauteur)
-        new_height = int(original_width / target_ratio)
-        y_center = original_height // 2
-        y1 = max(0, y_center - new_height // 2)
-        y2 = min(original_height, y_center + new_height // 2 + (new_height % 2))  # Assurer une hauteur exacte
-        cropped_clip = clip.cropped(x1=0, y1=y1, x2=original_width, y2=y2)
+        # Tolérance pour éviter un recadrage inutile si le ratio est déjà proche de 9:16
+        if abs(current_ratio - target_ratio) < 0.01:
+            # Déjà en 9:16 (ou très proche)
+            cropped_clip = clip
+        elif current_ratio > target_ratio:
+            # Trop large → crop horizontal (centrer sur la largeur)
+            new_width = int(original_height * target_ratio)
+            x_center = original_width // 2
+            x1 = max(0, x_center - new_width // 2)
+            x2 = min(original_width, x_center + new_width // 2 + (new_width % 2))  # Assurer une largeur exacte
+            cropped_clip = clip.cropped(x1=x1, y1=0, x2=x2, y2=original_height)
+        else:
+            # Trop haut → crop vertical (centrer sur la hauteur)
+            new_height = int(original_width / target_ratio)
+            y_center = original_height // 2
+            y1 = max(0, y_center - new_height // 2)
+            y2 = min(original_height, y_center + new_height // 2 + (new_height % 2))  # Assurer une hauteur exacte
+            cropped_clip = clip.cropped(x1=0, y1=y1, x2=original_width, y2=y2)
 
-    # Si un chemin de sortie est fourni, enregistrer la vidéo
-    if output_path:
-        output_dir = os.path.dirname(output_path)
-        if output_dir and not os.path.exists(output_dir):
-            os.makedirs(output_dir)
+        # Si un chemin de sortie est fourni, enregistrer la vidéo
+        if output_path:
+            output_dir = os.path.dirname(output_path)
+            if output_dir and not os.path.exists(output_dir):
+                os.makedirs(output_dir)
 
-        # Optimisations pour l'encodage
-        cropped_clip.write_videofile(
-            output_path,
-            codec="libx264",
-            audio_codec="aac",
-            preset="medium",
-            threads=4,
-            ffmpeg_params=["-crf", "23"]  # Meilleur compromis qualité/taille
-        )
+            # Optimisations pour l'encodage
+            cropped_clip.write_videofile(
+                output_path,
+                codec="libx264",
+                audio_codec="aac",
+                preset="medium",
+                threads=4,
+                ffmpeg_params=["-crf", "23"]  # Meilleur compromis qualité/taille
+            )
 
-        # Nettoyage des ressources
+            # Nettoyage des ressources
+            if close_clip:
+                clip.close()
+                cropped_clip.close()
+
+            return output_path
+
+        # Sinon, si nous avons ouvert le clip original, le fermer
         if close_clip:
             clip.close()
-            cropped_clip.close()
 
-        return output_path
-
-    # Sinon, si nous avons ouvert le clip original, le fermer
-    if close_clip:
-        clip.close()
-
-    return cropped_clip
+        return cropped_clip
+        
+    except Exception as e:
+        error_msg = f"Erreur lors du recadrage: {str(e)}"
+        logging.error(error_msg)
+        raise VideoDownloadError(error_msg) from e
 
 def list_videos_in_playlist(playlist_url, duration_range=None, max_results=50):
     """
@@ -562,11 +581,15 @@ def list_available_themes():
     Returns:
         list: Liste des thèmes disponibles
     """
-    # Exclure le thème "general" qui est utilisé par défaut
-    themes = [theme for theme in PLAYLIST_THEMES.keys() if theme != "general"]
-    return sorted(themes)
+    try:
+        # Exclure le thème "general" qui est utilisé par défaut
+        themes = [theme for theme in PLAYLIST_THEMES.keys() if theme != "general"]
+        return sorted(themes)
+    except Exception as e:
+        logging.error(f"Erreur lors de la récupération des thèmes: {str(e)}")
+        return []
 
-# # Exemple d'utilisation
+# Exemple d'utilisation avec gestion d'erreurs améliorée
 # if __name__ == "__main__":
 #     try:
 #         # Afficher les thèmes disponibles
@@ -579,34 +602,5 @@ def list_available_themes():
 #         theme = "minecraft"  # Choisir un thème parmi les disponibles
 #         video_path = download_video_by_theme(
 #             theme=theme,
-#             duration_range=(300, 800),  # Entre 1 et 3 minutes
-#             output_path=f"outputs/video_{theme}.mp4",
-#             random_selection=True  # Sélection aléatoire parmi les vidéos compatibles
-#         )
-#         print(f"Vidéo téléchargée et traitée avec succès: {video_path}")
-
-#         # Exemple 2: Lister toutes les vidéos d'une playlist thématique avec leurs durées
-#         # theme = "minecraft"
-#         # playlist_url = get_playlist_url_by_theme(theme)
-#         # videos = list_videos_in_playlist(
-#         #     playlist_url=playlist_url,
-#         #     duration_range=(60, 180)  # Optionnel: filtre par durée
-#         # )
-#         # print(f"Vidéos disponibles pour le thème {theme}:")
-#         # for i, (url, duration, title) in enumerate(videos, 1):
-#         #     minutes = int(duration // 60)
-#         #     seconds = int(duration % 60)
-#         #     print(f"{i}. {title} - {minutes}m{seconds}s - {url}")
-
-#         # Exemple 3: Télécharger une vidéo directement par son URL
-#         # video_path = download_video_by_url(
-#         #     url="https://www.youtube.com/watch?v=VOTRE_ID_VIDEO",
-#         #     duration_range=(60, 180),
-#         #     output_path="outputs/video_direct.mp4"
-#         # )
-#         # print(f"Vidéo téléchargée et traitée avec succès: {video_path}")
-
-#     except VideoDownloadError as e:
-#         print(f"Erreur lors du téléchargement: {e}")
-#     except Exception as e:
-#         print(f"Erreur inattendue: {e}")
+#             duration_range=(60, 300),  # Entre 1 et 5 minutes
+#             output_path=f"outputs/video_{theme}.mp4",)
