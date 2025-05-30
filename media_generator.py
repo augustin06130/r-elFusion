@@ -1,8 +1,10 @@
 import os
+import io
 import math
 import textwrap
 import tempfile
 import numpy as np
+from pydub import AudioSegment
 from gtts import gTTS
 from PIL import Image, ImageDraw, ImageFont
 from moviepy import VideoFileClip, AudioFileClip, ImageClip, CompositeVideoClip
@@ -64,186 +66,91 @@ def text_to_speech(text, filename="voice.mp3", lang="fr"):
             raise AudioError(error_msg, filename) from e
         raise
 
-
-def get_audio_duration(text_segment):
-    """
-    Génère un fichier audio temporaire pour le segment et retourne sa durée réelle (en secondes)
-    """
+def get_audio_duration(text_segment, lang='fr'):
     try:
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as temp_audio_file:
-            audio_path = temp_audio_file.name
-            engine = pyttsx3.init()
-            engine.save_to_file(text_segment, audio_path)
-            engine.runAndWait()
-
-        # Vérifier si le fichier existe
-        if not os.path.exists(audio_path):
-            logger.error(f"Le fichier audio temporaire n'a pas été créé: {audio_path}")
-            return 3.0  # Valeur par défaut en cas d'erreur
-            
-        # MoviePy pour calculer la durée
-        audio_clip = AudioFileClip(audio_path)
-        duration = audio_clip.duration
-        audio_clip.close()  # Fermeture propre du clip audio
-        
-        # Supprimer le fichier temporaire
-        os.remove(audio_path)
-        
-        # Vérifier si la durée est valide
-        if duration <= 0:
-            logger.warning(f"Durée audio invalide ({duration}s), utilisation d'une durée par défaut")
-            return 3.0  # Valeur par défaut si la durée est invalide
-            
-        return duration
+        tts = gTTS(text=text_segment, lang=lang)
+        audio_buffer = io.BytesIO()
+        tts.write_to_fp(audio_buffer)
+        audio_buffer.seek(0)
+        audio = AudioSegment.from_file(audio_buffer, format="mp3")
+        duration_sec = len(audio) / 1000.0
+        return duration_sec if duration_sec > 0 else 1.5
     except Exception as e:
-        logger.error(f"Erreur lors du calcul de la durée audio: {e}")
-        return 3.0  # Valeur par défaut en cas d'erreur
+        logger.error(f"Erreur lors de la génération audio pour [{text_segment}]: {e}")
+        return 2.0
 
-
-def create_subtitles(text, video_width, video_height, font_size=40, font_path=None):
-    """
-    Crée des clips de sous-titres synchronisés avec l'audio
-    """
+def create_subtitles(text, video_width, video_height, video_duration, font_size=40, font_path=None):
     logger.info(f"Création des sous-titres pour le texte ({len(text)} caractères)")
 
-    # 1. Découper le texte en segments
+    # Découper le texte en segments
     words = text.split()
-    segment_length = 6  # Nombre de mots par segment
-    
-    # Vérifier que words n'est pas vide
-    if not words:
-        logger.warning("Texte vide, aucun sous-titre créé")
-        return []
-        
-    segments = [' '.join(words[i:i + segment_length]) for i in range(0, len(words), segment_length)]
-    
-    logger.info(f"Texte découpé en {len(segments)} segments")
+    segment_length = 4
+    segments = [' '.join(words[i:i+segment_length]) for i in range(0, len(words), segment_length)]
 
-    # 2. Calculer durée réelle de chaque segment
-    logger.info("Calcul des durées audio réelles pour chaque segment...")
-    durations = [get_audio_duration(segment) for segment in segments]
-    start_times = [sum(durations[:i]) for i in range(len(durations))]
-    
-    logger.debug(f"Durées des segments: {durations}")
-    logger.debug(f"Temps de début des segments: {start_times}")
+    logger.debug(f"Texte divisé en {len(segments)} segments")
 
     def create_text_image(text, video_width, video_height, font_size=40):
-        """
-        Crée une image avec le texte du sous-titre
-        """
-        # Création d'une image RGBA transparente
         img = Image.new('RGBA', (video_width, video_height), (0, 0, 0, 0))
         draw = ImageDraw.Draw(img)
 
-        # Chargement de la police
         try:
-            if font_path and os.path.exists(font_path):
+            if font_path:
                 font = ImageFont.truetype(font_path, font_size)
-                logger.debug(f"Police chargée depuis {font_path}")
             else:
-                font_candidates = [
-                    "assets/fonts/Montserrat/static/Montserrat-Bold.ttf",
-                    "Arial.ttf",
-                    "DejaVuSans.ttf",
-                    "FreeSans.ttf"
-                ]
-                
-                for font_candidate in font_candidates:
-                    try:
-                        font = ImageFont.truetype(font_candidate, font_size)
-                        logger.debug(f"Police chargée depuis {font_candidate}")
-                        break
-                    except:
-                        continue
-                else:
-                    # Si aucune police n'a été trouvée, utiliser la police par défaut
-                    logger.warning("Aucune police spécifiée n'a été trouvée, utilisation de la police par défaut")
-                    font = ImageFont.load_default()
+                try:
+                    font = ImageFont.truetype("assets/fonts/Montserrat/static/Montserrat-Bold.ttf", font_size)
+                except:
+                    font = ImageFont.truetype("Arial.ttf", font_size)
         except Exception as e:
-            logger.warning(f"Erreur lors du chargement de la police: {e}")
+            logger.warning(f"Impossible de charger la police, utilisation de la police par défaut: {e}")
             font = ImageFont.load_default()
 
-        lines = text.split("\n")
-        
-        # Calcul de la largeur du texte selon la version de PIL
+        text_lines = text.split("\n")
+
         try:
-            # Pour les versions récentes de PIL (>=8.0.0)
-            text_widths = [draw.textbbox((0, 0), line, font=font)[2] for line in lines]
-            text_width = max(text_widths) if text_widths else font_size * len(text)
-        except AttributeError:
-            # Pour les versions plus anciennes de PIL
-            try:
-                text_widths = [draw.textsize(line, font=font)[0] for line in lines]
-                text_width = max(text_widths) if text_widths else font_size * len(text)
-            except Exception as e:
-                logger.warning(f"Erreur lors du calcul de la taille du texte: {e}")
-                # Estimation approximative de la largeur
-                text_width = font_size * len(text) / 2
+            text_width = max([draw.textbbox((0, 0), line, font=font)[2] for line in text_lines])
+        except:
+            text_width = max([draw.textsize(line, font=font)[0] for line in text_lines])
 
-        # Calcul de la position centrale
         position = ((video_width - text_width) // 2, int(video_height * 0.75))
-        
-        # Paramètres pour l'ombre du texte
         shadow_offset = 4
-        shadow_color = (0, 0, 0, 180)  # Noir semi-transparent
+        shadow_color = (0, 0, 0, 180)
 
-        # Dessin du texte
-        for i, line in enumerate(lines):
-            y_offset = position[1] + i * (font_size + 5)
-            # Dessiner l'ombre
-            draw.text((position[0] + shadow_offset, y_offset + shadow_offset), 
-                      line, font=font, fill=shadow_color)
-            # Dessiner le texte
-            draw.text((position[0], y_offset), 
-                      line, font=font, fill=(255, 255, 255, 255))  # Blanc
+        for line_idx, line in enumerate(text_lines):
+            y_offset = position[1] + line_idx * (font_size + 5)
+            draw.text((position[0] + shadow_offset, y_offset + shadow_offset), line, font=font, fill=shadow_color)
+            draw.text((position[0], y_offset), line, font=font, fill=(255, 255, 255, 255))
 
         return np.array(img)
 
-    # 3. Générer les clips de sous-titres synchronisés
-    subtitle_clips = []
-    
-    for i, segment in enumerate(segments):
-        # Formater le texte pour qu'il tienne sur une largeur raisonnable
-        formatted_text = textwrap.fill(segment, width=30)
-        
-        # Créer l'image du sous-titre
-        subtitle_img = create_text_image(formatted_text, video_width, video_height, font_size)
-        
-        # Vérifier la validité de l'image
-        if subtitle_img.size == 0:
-            logger.warning(f"Image de sous-titre vide pour le segment {i}, segment ignoré")
-            continue
-            
-        try:
-            # Créer un clip à partir de l'image
-            subtitle_clip = ImageClip(subtitle_img, ismask=False, transparent=True)
-            
-            # Définir la durée et le temps de début du clip
-            if i < len(durations) and durations[i] > 0:
-                subtitle_clip = subtitle_clip.with_duration(durations[i])
-            else:
-                # Durée par défaut si la durée calculée est invalide
-                subtitle_clip = subtitle_clip.with_duration(3.0)
-                
-            if i < len(start_times):
-                subtitle_clip = subtitle_clip.with_start(start_times[i])
-            else:
-                # Temps de début par défaut si le temps calculé est invalide
-                subtitle_clip = subtitle_clip.with_start(i * 3.0)
-                
-            subtitle_clips.append(subtitle_clip)
-            
-        except Exception as e:
-            logger.error(f"Erreur lors de la création du clip de sous-titre {i}: {e}")
-            continue
+    # Durée audio par segment
+    durations = [get_audio_duration(segment) for segment in segments]
+    total_duration = sum(durations)
 
-    logger.info(f"{len(subtitle_clips)} clips de sous-titres synchronisés créés.")
-    
-    # Debug: vérifier si des sous-titres ont été créés
-    if not subtitle_clips:
-        logger.warning("Aucun clip de sous-titre n'a été créé!")
-    
-    return subtitle_clips
+    # Ajustement si la somme dépasse la durée vidéo
+    if total_duration > video_duration:
+        ratio = video_duration / total_duration
+        logger.warning(f"Durée totale des sous-titres ({total_duration:.2f}s) > durée vidéo ({video_duration:.2f}s). Réduction des durées avec un ratio de {ratio:.3f}")
+        durations = [d * ratio for d in durations]
+
+    # Recalcul des start_times
+    start_times = [sum(durations[:i]) for i in range(len(durations))]
+
+    # Création des clips de sous-titres
+    subtitles = []
+    for i, segment in enumerate(segments):
+        formatted_text = textwrap.fill(segment, width=30)
+        subtitle_img = create_text_image(formatted_text, video_width, video_height, font_size)
+
+        try:
+            subtitle_clip = ImageClip(subtitle_img).with_duration(durations[i]).with_start(start_times[i])
+            subtitles.append(subtitle_clip)
+        except Exception as e:
+            logger.error(f"Erreur lors de la création du clip {i}: {e}")
+
+    logger.info(f"{len(subtitles)} clips de sous-titres créés avec succès")
+    return subtitles
+
 
 # def create_subtitles(text, video_width, video_height, video_duration, font_size=40, font_path=None):
 #     """
@@ -527,7 +434,7 @@ def create_video(audio_file, background_video="video.mp4", output="output.mp4", 
                 video_width, video_height = video_clip.size
 
                 # Créer les sous-titres
-                subtitles = create_subtitles(text, video_width, video_height)
+                subtitles = create_subtitles(text, video_width, video_height, audio_duration)
 
                 # Créer le clip final avec les sous-titres
                 final_clip = CompositeVideoClip([video_with_audio] + subtitles)
