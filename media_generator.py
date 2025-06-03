@@ -98,7 +98,7 @@ def create_subtitles(text, video_width, video_height, video_duration, font_size=
                 font = ImageFont.truetype(font_path, font_size)
             else:
                 try:
-                    font = ImageFont.truetype("assets/fonts/Montserrat/static/Montserrat-Bold.ttf", font_size)
+                    font = ImageFont.truetype("utils/static/Montserrat-Bold.ttf", font_size)
                 except:
                     font = ImageFont.truetype("Arial.ttf", font_size)
         except Exception as e:
@@ -150,110 +150,6 @@ def create_subtitles(text, video_width, video_height, video_duration, font_size=
 
     logger.info(f"{len(subtitles)} clips de sous-titres créés avec succès")
     return subtitles
-
-
-# def create_subtitles(text, video_width, video_height, video_duration, font_size=40, font_path=None):
-#     """
-#     Crée des sous-titres pour une vidéo à partir du texte
-
-#     Args:
-#         text: Texte à utiliser pour les sous-titres
-#         video_width: Largeur de la vidéo
-#         video_height: Hauteur de la vidéo
-#         video_duration: Durée de la vidéo en secondes
-#         font_size: Taille de la police
-#         font_path: Chemin vers la police à utiliser (optionnel)
-
-#     Returns:
-#         list: Liste des clips de sous-titres
-#     """
-#     logger.info(f"Création des sous-titres pour le texte ({len(text)} caractères)")
-
-#     # Découper le texte en segments
-#     words = text.split()
-#     segment_length = 4  # Nombre de mots par segment
-#     segments = [' '.join(words[i:i+segment_length]) for i in range(0, len(words), segment_length)]
-
-#     # Calculer la durée de chaque segment
-#     subtitle_duration = video_duration / len(segments)
-
-#     logger.debug(f"Texte divisé en {len(segments)} segments de {subtitle_duration:.2f}s chacun")
-
-#     def create_text_image(text, video_width, video_height, font_size=40):
-#         """Crée une image avec du texte centré et une ombre"""
-#         img = Image.new('RGBA', (video_width, video_height), (0, 0, 0, 0))
-#         draw = ImageDraw.Draw(img)
-
-#         # Essayer de charger la police personnalisée, sinon utiliser Arial
-#         try:
-#             if font_path:
-#                 font = ImageFont.truetype(font_path, font_size)
-#             else:
-#                 # Essayer d'abord la police Montserrat
-#                 try:
-#                     font = ImageFont.truetype("assets/fonts/Montserrat/static/Montserrat-Bold.ttf", font_size)
-#                 except:
-#                     font = ImageFont.truetype("Arial.ttf", font_size)
-#         except Exception as e:
-#             logger.warning(f"Impossible de charger la police, utilisation de la police par défaut: {e}")
-#             # Utiliser la police par défaut
-#             font = ImageFont.load_default()
-
-#         # Gérer le texte multiligne
-#         text_lines = text.split("\n")
-
-#         # Calculer la largeur maximale du texte pour centrage
-#         try:
-#             text_width = max([draw.textbbox((0, 0), line, font=font)[2] for line in text_lines])
-#         except:
-#             # Fallback pour les versions antérieures de PIL
-#             text_width = max([draw.textsize(line, font=font)[0] for line in text_lines])
-
-#         # Positionner le texte en bas de l'écran
-#         position = ((video_width - text_width) // 2, int(video_height * 0.75))
-
-#         # Ajouter l'ombre
-#         shadow_offset = 4
-#         shadow_color = (0, 0, 0, 180)  # Ombre semi-transparente
-
-#         for line_idx, line in enumerate(text_lines):
-#             y_offset = position[1] + line_idx * (font_size + 5)
-#             draw.text(
-#                 (position[0] + shadow_offset, y_offset + shadow_offset),
-#                 line,
-#                 font=font,
-#                 fill=shadow_color
-#             )
-#             # Texte principal en blanc
-#             draw.text(
-#                 (position[0], y_offset),
-#                 line,
-#                 font=font,
-#                 fill=(255, 255, 255, 255)
-#             )
-
-#         return np.array(img)
-
-#     # Créer les sous-titres
-#     subtitles = []
-#     for i, segment in enumerate(segments):
-#         # Formater le texte pour qu'il tienne dans la largeur de l'écran
-#         formatted_text = textwrap.fill(segment, width=30)
-
-#         # Créer l'image du sous-titre
-#         subtitle_img = create_text_image(formatted_text, video_width, video_height, font_size)
-
-#         # Créer le clip du sous-titre
-#         start_time = i * subtitle_duration
-#         subtitle_clip = ImageClip(subtitle_img, transparent=True) \
-#                       .with_duration(subtitle_duration) \
-#                       .with_start(start_time)
-
-#         subtitles.append(subtitle_clip)
-
-#     logger.info(f"{len(subtitles)} clips de sous-titres créés avec succès")
-
-#     return subtitles
 
 def initialize_segment_tracking():
     """Réinitialise le suivi des segments vidéo"""
