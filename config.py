@@ -31,5 +31,7 @@ def parse_arguments():
                         help="Modèle GPT à utiliser (par défaut : gpt-3.5-turbo)")
     parser.add_argument("--target_language", default="nt",
                         help="Langue cible pour la traduction (code ISO 639-1, ex: 'fr', 'en')")
+    parser.add_argument("--theme_playlist", default="minecraft", help="choisir un thème de playlist")
+    parser.add_argument("--keywords_youtube", default="Minecraft Parkour", help="Mots dans la description d'une video youtube")
 
     return parser.parse_args()
