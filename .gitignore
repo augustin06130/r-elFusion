@@ -2,7 +2,10 @@ output*
 *.mp4
 *.mp3
 *.log
+logs/*
 lib
 utils
 .env
 __pycache__
+__pycache__/*
+*.pyc
