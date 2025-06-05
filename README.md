@@ -119,9 +119,9 @@ Full list in `requirements.txt`
 
 ## 📈 Roadmap
 
-* [ ] Voice cloning support using XTTS speaker embeddings
+* [x] Voice cloning support using XTTS speaker embeddings
+* [x] Web UI or desktop GUI interface
 * [ ] Scheduled auto-posting to TikTok / YouTube / Instagram
-* [ ] Web UI or desktop GUI interface
 
 ---
 
