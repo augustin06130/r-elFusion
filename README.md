@@ -30,8 +30,8 @@ Powered by Reddit, multilingual TTS (`xtts-v2`), and AI video editing tools, thi
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/auto-shorts-generator.git
-cd auto-shorts-generator
+git clone https://github.com/your-username/r-elFusion.git
+cd r-elFusion
 ````
 
 ### 2. Install Dependencies
@@ -40,17 +40,18 @@ cd auto-shorts-generator
 pip install -r requirements.txt
 ```
 
-> This includes `huggingface_hub`, `praw`, `moviepy`, `deep_translator`, `whisper`, etc.
+> This includes `huggingface_hub`, `praw`, `moviepy`, `openai`, `yt_dlp`, etc.
 
 ### 3. Download the Voice Model
 
 Run this script to automatically download the [`xtts-v2`](https://github.com/coqui-ai/xtts) model hosted on [Hugging Face](https://huggingface.co):
 
 ```bash
+cd xtts-v2_Docker_API
 python download_model.py
 ```
 
-This will create a local folder `xtts_model/` with the necessary voice model files (\~1.8 GB).
+This will create a local folder `xtts-v2-model/` with the necessary voice model files (\~1.8 GB).
 
 ---
 
@@ -64,7 +65,7 @@ This project uses **[XTTS-v2](https://github.com/coqui-ai/xtts)** for high-quali
 from huggingface_hub import snapshot_download
 import os
 
-model_dir = "xtts_model"
+model_dir = "xtts-v2-model"
 
 if not os.path.isdir(model_dir):
     print("Downloading XTTS-v2 model from Hugging Face...")
