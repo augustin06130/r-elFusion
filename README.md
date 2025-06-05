@@ -49,6 +49,7 @@ Run this script to automatically download the [`xtts-v2`](https://huggingface.co
 ```bash
 cd xtts-v2_Docker_API
 python download_model.py
+docker compose up --build -d
 ```
 
 This will create a local folder `xtts-v2-model/` with the necessary voice model files (\~1.8 GB).
@@ -108,6 +109,7 @@ This repository itself is licensed under **MIT**.
 ## 🧰 Requirements (summary)
 
 * Python 3.8+
+* Docker
 * [`huggingface_hub`](https://pypi.org/project/huggingface-hub/)
 * `moviepy`, `nltk`
 * `openai`
