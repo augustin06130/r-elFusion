@@ -2,3 +2,12 @@ pytube
 wikipedia
 gTTS
 moviepy
+openai
+praw
+nltk
+pydub
+python-dotenv
+pyttsx3
+pyyaml
+pywsd
+yt_dlp
