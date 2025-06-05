@@ -30,7 +30,7 @@ Powered by Reddit, multilingual TTS (`xtts-v2`), and AI video editing tools, thi
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/r-elFusion.git
+git clone git@github.com:augustin06130/r-elFusion.git
 cd r-elFusion
 ````
 
