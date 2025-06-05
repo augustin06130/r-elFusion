@@ -1,0 +1,19 @@
+services:
+  tts-service:
+    build: ./tts-service
+    container_name: tts-api
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./audio_output:/app/audio_output
+      - ./audio_input:/app/audio_input
+      - ./xtts-v2-model:/app/xtts-v2-model
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TTS_HOME=/app/xtts-v2-model
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

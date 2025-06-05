@@ -11,3 +11,4 @@ pyttsx3
 pyyaml
 pywsd
 yt_dlp
+huggingface_hub

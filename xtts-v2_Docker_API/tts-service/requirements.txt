@@ -1,0 +1,4 @@
+# Installation minimale pour XTTS v2
+coqui-tts[xtts]
+flask==3.0.0
+flask-cors==4.0.0
