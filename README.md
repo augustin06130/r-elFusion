@@ -14,7 +14,7 @@ Powered by Reddit, multilingual TTS (`xtts-v2`), and AI video editing tools, thi
    - Parses long-form posts or comments into coherent narrative
    - Translates the story into multiple languages
    - Breaks the text into speech-friendly segments (1–1.5 min per segment)
-4. **Voice Generation**: Uses [`xtts-v2`](https://github.com/coqui-ai/xtts) for zero-shot multilingual voice synthesis
+4. **Voice Generation**: Uses [`xtts-v2`](https://huggingface.co/coqui/XTTS-v2) for zero-shot multilingual voice synthesis
 5. **Video Creation**:
    - Downloads a relevant background video from YouTube
    - Crops it to vertical (9:16) format
@@ -44,7 +44,7 @@ pip install -r requirements.txt
 
 ### 3. Download the Voice Model
 
-Run this script to automatically download the [`xtts-v2`](https://github.com/coqui-ai/xtts) model hosted on [Hugging Face](https://huggingface.co):
+Run this script to automatically download the [`xtts-v2`](https://huggingface.co/coqui/XTTS-v2) model hosted on [Hugging Face](https://huggingface.co/):
 
 ```bash
 cd xtts-v2_Docker_API
@@ -57,7 +57,7 @@ This will create a local folder `xtts-v2-model/` with the necessary voice model 
 
 ## 🔊 XTTS-v2 Voice Model
 
-This project uses **[XTTS-v2](https://github.com/coqui-ai/xtts)** for high-quality, zero-shot, multilingual voice generation. Due to GitHub's 100MB file size limit, the model is hosted on [Hugging Face](https://huggingface.co/your-username/xtts-v2-model) and is automatically downloaded using the script below:
+This project uses **XTTS-v2** for high-quality, zero-shot, multilingual voice generation. Due to GitHub's 100MB file size limit, the model is hosted on **[XTTS-v2](https://huggingface.co/coqui/XTTS-v2)** and is automatically downloaded using the script below:
 
 ### `download_model.py` (included in the repo):
 
@@ -70,7 +70,7 @@ model_dir = "xtts-v2-model"
 if not os.path.isdir(model_dir):
     print("Downloading XTTS-v2 model from Hugging Face...")
     snapshot_download(
-        repo_id="your-username/xtts-v2-model",
+        repo_id="https://huggingface.co/coqui/XTTS-v2",
         repo_type="model",
         local_dir=model_dir,
         local_dir_use_symlinks=False
@@ -99,7 +99,7 @@ python main.py --theme horror --languages en fr es
 
 ## ⚠️ Licensing Notice
 
-This project uses the [`xtts-v2`](https://github.com/coqui-ai/xtts) model developed by [Coqui](https://coqui.ai). The model is redistributed via Hugging Face and subject to its original license. You are responsible for ensuring that your use of the model complies with [Coqui's license and terms of use](https://github.com/coqui-ai/xtts#license).
+This project uses the [`xtts-v2`](https://huggingface.co/coqui/XTTS-v2) model developed by [Coqui](https://coqui.ai). The model is redistributed via Hugging Face and subject to its original license. You are responsible for ensuring that your use of the model complies with [Coqui's license and terms of use](https://huggingface.co/coqui/XTTS-v2#license).
 
 This repository itself is licensed under **MIT**.
 
@@ -139,7 +139,7 @@ Questions? Feedback? Open an issue or reach me at `nicauglazic@gmail.com`.
 
 ## 🧠 Credits
 
-* [Coqui XTTS-v2](https://github.com/coqui-ai/xtts) for multilingual voice synthesis
+* [Coqui XTTS-v2](https://huggingface.co/coqui/XTTS-v2) for multilingual voice synthesis
 * [Hugging Face Hub](https://huggingface.co/) for model hosting
 * [Reddit API](https://www.reddit.com/dev/api/) for story sourcing
 * [MoviePy](https://zulko.github.io/moviepy/) for video composition
