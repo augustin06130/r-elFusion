@@ -48,7 +48,7 @@ Run this script to automatically download the [`xtts-v2`](https://huggingface.co
 
 ```bash
 cd xtts-v2_Docker_API
-python download_xtts.py
+python download-xtts.py
 docker compose up --build -d
 ```
 
